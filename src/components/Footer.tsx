@@ -11,8 +11,6 @@ const Footer = () => {
       component="footer"
       sx={{
         py: 6,
-        background:
-          "linear-gradient(0deg, rgba(0,0,0,0.95) 0%, rgba(13, 2, 8, 0.9) 100%)",
         position: "relative",
         overflow: "hidden",
         color: "text.secondary",
@@ -20,33 +18,6 @@ const Footer = () => {
         borderColor: "primary.main",
       }}
     >
-      {/* Matrix code rain effect */}
-      <Box
-        sx={{
-          position: "absolute",
-          inset: 0,
-          opacity: 0.05,
-          pointerEvents: "none",
-          zIndex: 0,
-        }}
-      >
-        <motion.div
-          animate={{
-            backgroundPosition: ["0px 0px", "0px 1000px"],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="30" fill="%2300FF41" font-family="monospace" font-size="20">10</text><text x="50" y="50" fill="%2300FF41" font-family="monospace" font-size="20">01</text><text x="30" y="70" fill="%2300FF41" font-family="monospace" font-size="20">01</text><text x="70" y="20" fill="%2300FF41" font-family="monospace" font-size="20">10</text></svg>')`,
-          }}
-        />
-      </Box>
-
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <Grid container spacing={4} justifyContent="center">
           <Grid size={{ xs: 12, md: 5 }}>

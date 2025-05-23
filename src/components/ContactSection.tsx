@@ -21,7 +21,6 @@ import {
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import SendIcon from "@mui/icons-material/Send";
 import PersonIcon from "@mui/icons-material/Person";
 import SubjectIcon from "@mui/icons-material/Subject";
@@ -51,7 +50,6 @@ const ContactSection = () => {
     [0.9, 0.5, 0.3, 0],
     [0.2, 1, 1, 0.2]
   );
-  const y = useTransform(scrollYProgress, [0.8, 0.2], ["-30px", "30px"]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -87,52 +85,10 @@ const ContactSection = () => {
       ref={ref}
       sx={{
         py: 10,
-        background:
-          "linear-gradient(180deg, rgba(13, 2, 8, 0.9) 0%, rgba(0,0,0,0.95) 100%)",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* Matrix code effect for background */}
-      <Box
-        sx={{
-          position: "absolute",
-          inset: 0,
-          opacity: 0.1,
-          pointerEvents: "none",
-        }}
-      >
-        <motion.div
-          animate={{
-            backgroundPosition: ["0px 0px", "100px 500px"],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="30" fill="%2300FF41" font-family="monospace" font-size="20">10</text><text x="50" y="50" fill="%2300FF41" font-family="monospace" font-size="20">01</text><text x="30" y="70" fill="%2300FF41" font-family="monospace" font-size="20">01</text><text x="70" y="20" fill="%2300FF41" font-family="monospace" font-size="20">10</text></svg>')`,
-          }}
-        />
-      </Box>
-
-      <motion.div
-        style={{
-          position: "absolute",
-          top: "10%",
-          right: "5%",
-          width: "300px",
-          height: "300px",
-          borderRadius: "50%",
-          background:
-            "radial-gradient(circle, rgba(0,255,65,0.1) 0%, rgba(0,0,0,0) 70%)",
-          y,
-        }}
-      />
-
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <motion.div style={{ opacity }}>
           <motion.div
@@ -165,12 +121,12 @@ const ContactSection = () => {
                 fontFamily: "Courier New, monospace",
               }}
             >
-              The Matrix has you. Follow the white rabbit. Knock, knock, Neo.
+              The Matrix has you. Follow the white rabbit. Knock, knock, Gio.
             </Typography>
           </motion.div>
 
           <Grid container spacing={4}>
-            <Grid sx={{ width: { xs: "100%", md: "50%" } }}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -194,11 +150,24 @@ const ContactSection = () => {
                     <ListItemIcon sx={{ color: "primary.main" }}>
                       <EmailIcon />
                     </ListItemIcon>
+
                     <ListItemText
+                      primary="Email"
+                      secondary={
+                        <Link
+                          href="mailto:giovanni_rosa4@hotmail.com"
+                          sx={{
+                            color: "text.secondary",
+                            "&:hover": { color: "primary.main" },
+                            fontFamily: "Courier New, monospace",
+                          }}
+                        >
+                          giovanni_rosa4@hotmail.com
+                        </Link>
+                      }
                       slotProps={{
-                        // Props passed to the primary Typography slot
+                        // what used to be primaryTypographyProps
                         primary: {
-                          children: "Email",
                           variant: "body1",
                           sx: {
                             fontWeight: "bold",
@@ -206,21 +175,9 @@ const ContactSection = () => {
                             fontFamily: "Courier New, monospace",
                           },
                         },
-                        // Props passed to the secondary Typography slot
+                        // what used to be secondaryTypographyProps
                         secondary: {
-                          children: (
-                            <Link
-                              href="mailto:neo@thematrix.dev"
-                              sx={{
-                                color: "text.secondary",
-                                "&:hover": { color: "primary.main" },
-                                fontFamily: "Courier New, monospace",
-                              }}
-                            >
-                              neo@thematrix.dev
-                            </Link>
-                          ),
-                          component: "div", // so it can legally wrap Link/Box
+                          component: "div", // so it can legally wrap our Link
                         },
                       }}
                     />
@@ -231,10 +188,46 @@ const ContactSection = () => {
                     <ListItemIcon sx={{ color: "primary.main" }}>
                       <GitHubIcon />
                     </ListItemIcon>
+
                     <ListItemText
+                      primary="Social Networks"
+                      secondary={
+                        <Box
+                          sx={{
+                            display: "flex",
+                            gap: 2,
+                            mt: 1,
+                            fontFamily: "Courier New, monospace",
+                          }}
+                        >
+                          <Link
+                            href="https://github.com/giovannirosa"
+                            sx={{
+                              color: "text.secondary",
+                              "&:hover": { color: "primary.main" },
+                              display: "flex",
+                              alignItems: "center",
+                              gap: 0.5,
+                            }}
+                          >
+                            <GitHubIcon fontSize="small" /> GitHub
+                          </Link>
+                          <Link
+                            href="https://www.linkedin.com/in/giovanni-rosa"
+                            sx={{
+                              color: "text.secondary",
+                              "&:hover": { color: "primary.main" },
+                              display: "flex",
+                              alignItems: "center",
+                              gap: 0.5,
+                            }}
+                          >
+                            <LinkedInIcon fontSize="small" /> LinkedIn
+                          </Link>
+                        </Box>
+                      }
                       slotProps={{
                         primary: {
-                          children: "Social Networks",
                           variant: "body1",
                           sx: {
                             fontWeight: "bold",
@@ -243,53 +236,6 @@ const ContactSection = () => {
                           },
                         },
                         secondary: {
-                          children: (
-                            <Box
-                              sx={{
-                                display: "flex",
-                                gap: 2,
-                                mt: 1,
-                                fontFamily: "Courier New, monospace",
-                              }}
-                            >
-                              <Link
-                                href="#"
-                                sx={{
-                                  color: "text.secondary",
-                                  "&:hover": { color: "primary.main" },
-                                  display: "flex",
-                                  alignItems: "center",
-                                  gap: 0.5,
-                                }}
-                              >
-                                <GitHubIcon fontSize="small" /> GitHub
-                              </Link>
-                              <Link
-                                href="#"
-                                sx={{
-                                  color: "text.secondary",
-                                  "&:hover": { color: "primary.main" },
-                                  display: "flex",
-                                  alignItems: "center",
-                                  gap: 0.5,
-                                }}
-                              >
-                                <LinkedInIcon fontSize="small" /> LinkedIn
-                              </Link>
-                              <Link
-                                href="#"
-                                sx={{
-                                  color: "text.secondary",
-                                  "&:hover": { color: "primary.main" },
-                                  display: "flex",
-                                  alignItems: "center",
-                                  gap: 0.5,
-                                }}
-                              >
-                                <TwitterIcon fontSize="small" /> Twitter
-                              </Link>
-                            </Box>
-                          ),
                           component: "div",
                         },
                       }}
@@ -332,7 +278,7 @@ const ContactSection = () => {
               </motion.div>
             </Grid>
 
-            <Grid sx={{ width: { xs: "100%", md: "50%" } }}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}

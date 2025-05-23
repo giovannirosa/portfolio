@@ -6,15 +6,6 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import EmailIcon from "@mui/icons-material/Email";
 
-const matrixCodeRain = Array(20)
-  .fill(0)
-  .map(() => ({
-    position: Math.random() * 100,
-    speed: Math.random() * 10 + 5,
-    length: Math.floor(Math.random() * 20) + 5,
-    opacity: Math.random() * 0.5 + 0.3,
-  }));
-
 const HeroSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -28,6 +19,7 @@ const HeroSection = () => {
 
   return (
     <Box
+      component="section"
       id="home"
       ref={ref}
       sx={{
@@ -40,48 +32,6 @@ const HeroSection = () => {
         bgcolor: "black",
       }}
     >
-      {/* Matrix rain effect in background */}
-      <Box
-        sx={{
-          position: "absolute",
-          inset: 0,
-          opacity: 0.3,
-          overflow: "hidden",
-        }}
-      >
-        {matrixCodeRain.map((rain, i) => (
-          <motion.div
-            key={i}
-            initial={{ y: -100, x: `${rain.position}%` }}
-            animate={{
-              y: ["0vh", "100vh"],
-            }}
-            transition={{
-              duration: rain.speed,
-              repeat: Infinity,
-              repeatType: "loop",
-              ease: "linear",
-              delay: i * 0.2,
-            }}
-            style={{
-              position: "absolute",
-              color: "#00FF41",
-              fontFamily: "monospace",
-              fontSize: "1.2rem",
-              textShadow: "0 0 8px #00FF41",
-              writingMode: "vertical-rl",
-              opacity: rain.opacity,
-            }}
-          >
-            {Array(rain.length)
-              .fill(0)
-              .map((_, i) => (
-                <span key={i}>{Math.random() > 0.5 ? "1" : "0"}</span>
-              ))}
-          </motion.div>
-        ))}
-      </Box>
-
       <motion.div style={{ y: backgroundY, position: "absolute", inset: 0 }}>
         <Box
           sx={{

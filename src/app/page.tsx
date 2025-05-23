@@ -8,6 +8,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import MatrixRain from "@/components/MatrixRain";
 
 const Home = () => {
   return (
@@ -15,12 +16,14 @@ const Home = () => {
       <Box className="matrix-container">
         <Header />
         <Box component="main">
-          <HeroSection />
-          <AboutSection />
-          <SkillsSection />
-          <ExperienceSection />
-          <ProjectsSection />
-          <ContactSection />
+          <MatrixRain>
+            <HeroSection />
+            <AboutSection />
+            <SkillsSection />
+            <ExperienceSection />
+            <ProjectsSection />
+            <ContactSection />
+          </MatrixRain>
         </Box>
         <Footer />
       </Box>

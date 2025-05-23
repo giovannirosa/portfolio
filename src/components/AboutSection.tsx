@@ -31,38 +31,10 @@ const AboutSection = () => {
       ref={ref}
       sx={{
         py: 10,
-        background:
-          "linear-gradient(0deg, rgba(0,0,0,0.95) 0%, rgba(13, 2, 8, 0.9) 100%)",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* Matrix code effect for background */}
-      <Box
-        sx={{
-          position: "absolute",
-          inset: 0,
-          opacity: 0.05,
-          pointerEvents: "none",
-        }}
-      >
-        <motion.div
-          animate={{
-            backgroundPosition: ["0px 0px", "-100px 500px"],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="30" fill="%2300FF41" font-family="monospace" font-size="20">10</text><text x="50" y="50" fill="%2300FF41" font-family="monospace" font-size="20">01</text><text x="30" y="70" fill="%2300FF41" font-family="monospace" font-size="20">01</text><text x="70" y="20" fill="%2300FF41" font-family="monospace" font-size="20">10</text></svg>')`,
-          }}
-        />
-      </Box>
-
       <Container maxWidth="lg">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -117,10 +89,8 @@ const AboutSection = () => {
                     backdropFilter: "blur(10px)",
                     border: "1px solid",
                     borderColor: "primary.main",
-                    height: "749px",
-                    width: "auto",
-                    minHeight: "450px",
-                    maxHeight: "749px",
+                    height: { xs: 450, md: 749 },
+                    width: "100%",
                   }}
                 >
                   <CardContent sx={{ p: 0, height: "100%", width: "100%" }}>
@@ -130,6 +100,7 @@ const AboutSection = () => {
                       fill
                       style={{
                         borderRadius: "4px",
+                        objectFit: "cover",
                       }}
                     />
                   </CardContent>

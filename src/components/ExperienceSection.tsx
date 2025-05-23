@@ -78,46 +78,15 @@ const ExperienceSection = () => {
 
   return (
     <Box
+      component="section"
       id="experience"
       ref={containerRef}
       sx={{
         py: 10,
-        background:
-          "linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(13, 2, 8, 0.9) 100%)",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* Matrix code rain effect */}
-      <Box
-        sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          opacity: 0.1,
-          pointerEvents: "none",
-          zIndex: 0,
-        }}
-      >
-        <motion.div
-          animate={{
-            backgroundPosition: ["0px 0px", "0px 1000px"],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="30" fill="%2300FF41" font-family="monospace" font-size="20">10</text><text x="50" y="50" fill="%2300FF41" font-family="monospace" font-size="20">01</text><text x="30" y="70" fill="%2300FF41" font-family="monospace" font-size="20">01</text><text x="70" y="20" fill="%2300FF41" font-family="monospace" font-size="20">10</text></svg>')`,
-          }}
-        />
-      </Box>
-
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
