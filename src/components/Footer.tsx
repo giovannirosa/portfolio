@@ -77,8 +77,13 @@ const Footer = () => {
                   <Box component="li" key={link.id} sx={{ mb: 1 }}>
                     <Typography
                       component="a"
-                      href={`#${link.id}`}
+                      onClick={() =>
+                        document
+                          .getElementById(link.id)
+                          ?.scrollIntoView({ behavior: "smooth" })
+                      }
                       sx={{
+                        cursor: "pointer",
                         color: "text.secondary",
                         textDecoration: "none",
                         transition: "color 0.3s",
@@ -155,7 +160,9 @@ const Footer = () => {
                   color: "text.secondary",
                 }}
               >
-                giovanni_rosa4@hotmail.com
+                giovanni_rosa4
+                <wbr />
+                @hotmail.com
               </Typography>
             </motion.div>
           </Grid>

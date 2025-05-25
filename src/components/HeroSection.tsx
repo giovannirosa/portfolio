@@ -133,7 +133,7 @@ const HeroSection = () => {
                   startIcon={<VisibilityIcon />}
                   onClick={() =>
                     document
-                      .getElementById("projects")
+                      .getElementById("about")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                   sx={{
