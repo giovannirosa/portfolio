@@ -49,7 +49,7 @@ const AboutSection = () => {
             sx={{
               fontWeight: "bold",
               color: "primary.main",
-              mb: 6,
+              mb: 3,
               fontFamily: "Courier New, monospace",
             }}
           >
@@ -114,51 +114,70 @@ const AboutSection = () => {
               <Typography
                 variant="h4"
                 sx={{
-                  mb: 3,
+                  mb: 2,
                   color: "primary.main",
                   fontFamily: "Courier New, monospace",
                   fontWeight: "bold",
                 }}
               >
-                Software Engineer & Problem Solver
+                Computer Scientist & <br />Full Stack Software Engineer
               </Typography>
 
-              <Box sx={{ color: "text.secondary", mb: 4 }}>
-                <Typography sx={{ fontFamily: "Courier New, monospace" }}>
-                  Hello! I&apos;m Neo, a passionate software engineer with a
-                  background in building scalable web applications. My journey
-                  in coding started when I discovered there was no spoon, and
-                  I&apos;ve been bending the rules of the digital world ever
-                  since.
+              <Box sx={{ color: "text.secondary", mb: 2 }}>
+                <Typography
+                  sx={{ fontFamily: "Courier New, monospace" }}
+                  gutterBottom
+                >
+                  Hi! I&apos;m Gio, a passionate software engineer
+                  from Brazil with over 9 years of experience designing and
+                  developing modern, scalable web applications. My journey began
+                  with a deep curiosity about how systems work and grew into a
+                  career focused on creating smart, secure, and connected
+                  digital experiences.
+                </Typography>
+                <Typography
+                  sx={{ fontFamily: "Courier New, monospace" }}
+                  gutterBottom
+                >
+                  With a strong academic background—holding both a
+                  Bachelor&apos;s and a Master&apos;s degree in Computer Science
+                  from UFPR—my expertise lies in crafting full stack solutions
+                  using React, Node.js, Java, Python, and a range of modern
+                  frameworks. I&apos;ve contributed to international and
+                  national projects across various industries, including
+                  aviation, healthcare, IoT, finance, and real estate, working
+                  with clients such as SITA, Schneider, Corvalent, and RCI Bank.
+                </Typography>
+                <Typography
+                  sx={{ fontFamily: "Courier New, monospace" }}
+                  gutterBottom
+                >
+                  Today, I run{" "}
+                  <span style={{ color: "#00FF41" }}>GRDS IT Services</span>,
+                  where I build web platforms that connect to IoT devices,
+                  manage real-time data via MQTT, IoT Core, Aurora, and deploy
+                  cloud-native solutions on AWS and Azure.
                 </Typography>
                 <Typography sx={{ fontFamily: "Courier New, monospace" }}>
-                  My main focus these days is building accessible, inclusive
-                  products and digital experiences at{" "}
-                  <span style={{ color: "#00FF41" }}>Zion Systems</span> for a
-                  variety of clients.
-                </Typography>
-                <Typography sx={{ fontFamily: "Courier New, monospace" }}>
-                  I also recently launched a course that covers everything you
-                  need to build a web app with the MERN stack and escape the
-                  Matrix.
-                </Typography>
-                <Typography sx={{ fontFamily: "Courier New, monospace" }}>
-                  When I&apos;m not at the computer, I&apos;m usually practicing
-                  kung fu, dodging agents, or exploring glitches in the system.
+                  When I&apos;m not writing code or solving architecture
+                  puzzles, I&apos;m exploring my interests in IoT, machine
+                  learning, blockchain, and augmented reality—or just enjoying
+                  the latest breakthroughs in tech. Oh, and I also enjoy a
+                  little gaming on the side—keeps me sharp!
                 </Typography>
               </Box>
 
-              <Box sx={{ mt: 4 }}>
+              <Box sx={{ mt: 2 }}>
                 <Typography
                   variant="h6"
                   sx={{
-                    mb: 2,
+                    mb: 1,
                     color: "secondary.main",
                     fontFamily: "Courier New, monospace",
                     fontWeight: "bold",
                   }}
                 >
-                  Education & Training
+                  Academic Education
                 </Typography>
                 <Box component="ul" sx={{ listStyleType: "disc", pl: 4 }}>
                   <Box
@@ -169,8 +188,8 @@ const AboutSection = () => {
                       fontFamily: "Courier New, monospace",
                     }}
                   >
-                    B.S. in Computer Science, University of Technology
-                    (2015-2019)
+                    Bachelor in Computer Science, University of Paraná (UFPR)
+                    2014-2019
                   </Box>
                   <Box
                     component="li"
@@ -180,17 +199,8 @@ const AboutSection = () => {
                       fontFamily: "Courier New, monospace",
                     }}
                   >
-                    Full Stack Web Development Bootcamp, Code Academy (2020)
-                  </Box>
-                  <Box
-                    component="li"
-                    sx={{
-                      color: "text.secondary",
-                      fontFamily: "Courier New, monospace",
-                    }}
-                  >
-                    Martial Arts Training with Morpheus, The Nebuchadnezzar
-                    (Ongoing)
+                    Master in Networks and Distributed Systems at NR2 -
+                    University of Paraná (UFPR) - 2020-2023
                   </Box>
                 </Box>
               </Box>
@@ -198,7 +208,7 @@ const AboutSection = () => {
           </Grid>
         </Grid>
 
-        <Box sx={{ textAlign: "center", mt: 8 }}>
+        <Box sx={{ textAlign: "center", mt: 4 }}>
           <Typography
             variant="body2"
             sx={{

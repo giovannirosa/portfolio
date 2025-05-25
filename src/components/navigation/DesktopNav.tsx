@@ -27,6 +27,7 @@ const DesktopNav = ({
 
       <Button
         variant="contained"
+        onClick={() => window.open("/Resume Giovanni Rosa.pdf", "_blank")}
         startIcon={<DescriptionIcon />}
         sx={{
           ml: 2,

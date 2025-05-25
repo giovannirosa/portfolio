@@ -5,7 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
-import ProjectsSection from "@/components/ProjectsSection";
+// import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import MatrixRain from "@/components/MatrixRain";
@@ -21,7 +21,7 @@ const Home = () => {
             <AboutSection />
             <SkillsSection />
             <ExperienceSection />
-            <ProjectsSection />
+            {/* <ProjectsSection /> */}
             <ContactSection />
           </MatrixRain>
         </Box>

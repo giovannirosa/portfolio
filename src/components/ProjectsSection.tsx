@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Box,
@@ -69,9 +69,6 @@ const projects = [
 
 const ProjectsSection = () => {
   const ref = useRef<HTMLElement>(null);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  console.log({ hoveredIndex });
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -136,8 +133,6 @@ const ProjectsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
                 whileHover={{ y: -10 }}
                 style={{ height: "100%" }}
               >

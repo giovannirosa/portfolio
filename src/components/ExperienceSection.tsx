@@ -21,45 +21,120 @@ import {
 } from "@mui/lab";
 import CodeIcon from "@mui/icons-material/Code";
 import TerminalIcon from "@mui/icons-material/Terminal";
-import ComputerIcon from "@mui/icons-material/Computer";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
+import ComputerIcon from "@mui/icons-material/Computer";
+import StorageIcon from "@mui/icons-material/Storage";
+import PublicIcon from "@mui/icons-material/Public";
 
 const experiences = [
   {
-    title: "Senior Frontend Developer",
-    company: "Zion Systems Inc",
-    period: "2022 - Present",
+    title: "Full Stack Developer",
+    company: "GRDS IT Services",
+    period: "Dec 2022 - Present",
     description:
-      "Leading the frontend development team in building responsive web applications using React and Next.js. Breaking free from legacy systems and implementing modern state management.",
-    tags: ["React", "Next.js", "TypeScript", "Redux"],
+      "Leading the development of two international web applications for IoT device management. One is built with React (Next.js) and Node.js, integrated with MQTT and InfluxDB, deployed on AWS and Azure. The other is built with React and SST (Node.js), integrated with MQTT, IoT Core, Kinesis, Lambda, Aurora, AppSync, Athena, S3, API Gateway, Cognito, and deployed on AWS with Amplify.",
+    tags: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "MQTT",
+      "InfluxDB",
+      "AWS",
+      "Azure",
+      "SST",
+      "IoT Core",
+      "Kinesis",
+      "Lambda",
+      "Aurora",
+      "AppSync",
+      "Athena",
+      "S3",
+      "API Gateway",
+      "Cognito",
+      "Amplify",
+    ],
+    icon: <PublicIcon />,
+  },
+  {
+    title: "Full Stack Developer",
+    company: "CI&T - dynaConnections",
+    period: "Aug 2022 - Dec 2022",
+    description:
+      "Modernized connectMLS, a real estate web app for US realtors. Migrated legacy code from AngularJS/Java to React/Spring Boot and improved system architecture.",
+    tags: ["React", "Java", "Spring Boot", "AngularJS", "Real Estate"],
+    icon: <CodeIcon />,
+  },
+  {
+    title: "Full Stack Developer",
+    company: "CI&T - Corvalent",
+    period: "Jun 2021 - Jul 2022",
+    description:
+      "Developed CAT-APM, a web app to manage IoT devices. Used React on the frontend and ClearBlade (Node.js-based) on the backend.",
+    tags: ["React", "Node.js", "IoT", "ClearBlade"],
+    icon: <StorageIcon />,
+  },
+  {
+    title: "Full Stack Developer",
+    company: "CINQ - Schneider Electric",
+    period: "May 2021 - Jun 2021",
+    description:
+      "Built AI Backoffice, a tool to resolve invoice mismatches using Django and React, integrated into global finance systems.",
+    tags: ["React", "Python", "Django REST", "Finance"],
     icon: <ComputerIcon />,
   },
   {
     title: "Full Stack Developer",
-    company: "Matrix Innovations",
-    period: "2019 - 2022",
+    company: "CINQ - SASCAR",
+    period: "Jul 2020 - May 2021",
     description:
-      "Developed full-stack applications that bend reality. Collaborated with UX designers to implement responsive designs and ensure accessibility compliance across the digital realm.",
-    tags: ["React", "Node.js", "MongoDB", "Express"],
-    icon: <CodeIcon />,
-  },
-  {
-    title: "Junior Web Developer",
-    company: "Blue Pill Agency",
-    period: "2017 - 2019",
-    description:
-      "Unplugged from legacy systems and helped clients see the truth of modern web development. Built and maintained client websites using cutting-edge frameworks.",
-    tags: ["HTML", "CSS", "JavaScript", "jQuery"],
+      "Developed SASWeb 2, a fleet management platform using AngularJS and Java Spring Boot for national logistics solutions.",
+    tags: ["AngularJS", "Java", "Spring Boot", "Fleet Management"],
     icon: <TerminalIcon />,
   },
   {
-    title: "Web Development Intern",
-    company: "The Oracle StartUp",
-    period: "2017",
+    title: "Frontend Developer",
+    company: "CINQ - COMPAR",
+    period: "Jan 2020 - Jul 2020",
     description:
-      "Took the red pill and began my journey into the real world of software development. Assisted in developing user interfaces under senior developer supervision.",
-    tags: ["HTML", "CSS", "JavaScript"],
+      "Built the Tudobem web/mobile health platform using React and React Native for improved patient engagement.",
+    tags: ["React", "React Native", "Material UI", "Healthcare"],
     icon: <DeveloperModeIcon />,
+  },
+  {
+    title: "Frontend Developer",
+    company: "CINQ - Systecon",
+    period: "Dec 2019 - Jan 2020",
+    description:
+      "Modernized the Opus Suite desktop app into a web app using Vue.js and Vuetify, enhancing usability for logistics planning.",
+    tags: ["Vue.js", "Vuetify", "Modernization"],
+    icon: <CodeIcon />,
+  },
+  {
+    title: "Frontend Developer",
+    company: "CINQ - RCI Bank",
+    period: "Oct 2019 - Dec 2019",
+    description:
+      "Developed a web application for car dealership management using Angular and Material.",
+    tags: ["Angular", "Material UI", "Automotive"],
+    icon: <TerminalIcon />,
+  },
+  {
+    title: "Full Stack Developer",
+    company: "CINQ - Imprint Energy",
+    period: "Dec 2018 - Oct 2019",
+    description:
+      "Created a full stack battery factory control web app using React and Django REST for energy tech solutions.",
+    tags: ["React", "Python", "Django REST", "Factory Automation"],
+    icon: <StorageIcon />,
+  },
+  {
+    title: "Intern & Junior Developer",
+    company: "CINQ - SITA",
+    period: "Mar 2015 - Dec 2018",
+    description:
+      "Maintained and developed Airfare Insight, a Java Swing application for aviation pricing control integrated with Oracle DB.",
+    tags: ["Java", "Swing", "Oracle", "Weblogic", "Aviation"],
+    icon: <ComputerIcon />,
   },
 ];
 
@@ -207,6 +282,7 @@ const ExperienceSection = () => {
                       },
                     },
                   }}
+                  whileHover={{ y: -10 }}
                 >
                   <Paper
                     elevation={3}
@@ -217,6 +293,10 @@ const ExperienceSection = () => {
                       borderColor: "primary.main",
                       backdropFilter: "blur(5px)",
                       width: "100%",
+                      "&:hover": {
+                        transform: "translateY(-8px)",
+                        boxShadow: "0 10px 20px rgba(0, 255, 65, 0.1)",
+                      },
                     }}
                   >
                     <Typography
@@ -276,6 +356,11 @@ const ExperienceSection = () => {
                             borderWidth: 1,
                             borderStyle: "solid",
                             fontFamily: "Courier New, monospace",
+                            transition: "transform 0.6s ease-in-out",
+                            "&:hover": {
+                              transform: "rotate(360deg)",
+                              boxShadow: "0 10px 20px rgba(0, 255, 65, 0.1)",
+                            },
                           }}
                         />
                       ))}

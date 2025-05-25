@@ -4,6 +4,7 @@ import { Typography, Container, Box, Grid, IconButton } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
+import { NAV_ITEMS } from "./navigation/constants";
 
 const Footer = () => {
   return (
@@ -72,18 +73,11 @@ const Footer = () => {
                 Quick Links
               </Typography>
               <Box component="ul" sx={{ listStyleType: "none", p: 0, m: 0 }}>
-                {[
-                  "Home",
-                  "About",
-                  "Skills",
-                  "Experience",
-                  "Projects",
-                  "Contact",
-                ].map((link) => (
-                  <Box component="li" key={link} sx={{ mb: 1 }}>
+                {NAV_ITEMS.map((link) => (
+                  <Box component="li" key={link.id} sx={{ mb: 1 }}>
                     <Typography
                       component="a"
-                      href={`#${link.toLowerCase()}`}
+                      href={`#${link.id}`}
                       sx={{
                         color: "text.secondary",
                         textDecoration: "none",
@@ -94,7 +88,7 @@ const Footer = () => {
                         fontFamily: "Courier New, monospace",
                       }}
                     >
-                      {link}
+                      {link.label}
                     </Typography>
                   </Box>
                 ))}

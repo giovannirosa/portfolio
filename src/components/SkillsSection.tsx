@@ -11,33 +11,74 @@ const skills = [
       "TypeScript",
       "React",
       "Next.js",
-      "HTML & CSS",
-      "Tailwind CSS",
-      "Redux",
+      "AngularJS",
+      "Angular 2+",
+      "Vue.js",
+      "React Native",
+      "HTML",
+      "CSS",
+      "JSON",
+      "Material UI"
     ],
   },
   {
     category: "Backend",
     items: [
       "Node.js",
-      "Express",
+      "SST",
+      "Java",
+      "C",
+      "C++",
+      "Spring Boot",
       "Python",
-      "Django",
-      "GraphQL",
+      "Django REST Framework",
       "RESTful APIs",
     ],
   },
   {
+    category: "Protocols",
+    items: [
+      "HTTP",
+      "MQTT",
+      "UDP",
+      "TCP/IP",
+      "RTSP",
+      "HLS",
+      "SSH",
+      "SMTP",
+      "DNS",
+      "IP",
+    ],
+  },
+  {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Redis"],
+    items: ["MySQL", "PostgreSQL", "MongoDB", "InfluxDB", "Oracle", "DynamoDB"],
   },
   {
     category: "DevOps",
-    items: ["Git", "Docker", "CI/CD", "AWS", "Netlify", "Vercel"],
+    items: [
+      "Git",
+      "Gitlab Pipelines",
+      "Docker",
+      "AWS",
+      "Azure",
+      "Google Cloud",
+    ],
   },
   {
     category: "Tools",
-    items: ["VS Code", "Figma", "Jira", "Postman", "Chrome DevTools"],
+    items: [
+      "JIRA",
+      "Scrum",
+      "SVN",
+      "Mininet",
+      "VS Code",
+      "Chrome DevTools",
+      "Postman",
+      "Figma",
+      "ns-3",
+      "XML",
+    ],
   },
 ];
 
@@ -109,6 +150,7 @@ const SkillsSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
+                  whileHover={{ y: -10 }}
                   style={{ height: "100%" }}
                 >
                   <Paper
@@ -121,6 +163,10 @@ const SkillsSection = () => {
                       backdropFilter: "blur(5px)",
                       height: "100%",
                       mx: 0,
+                      "&:hover": {
+                        transform: "translateY(-8px)",
+                        boxShadow: "0 10px 20px rgba(0, 255, 65, 0.1)",
+                      },
                     }}
                   >
                     <Typography
@@ -151,6 +197,11 @@ const SkillsSection = () => {
                             fontWeight: 500,
                             mb: 1,
                             fontFamily: "Courier New, monospace",
+                            transition: "transform 0.6s ease-in-out",
+                            "&:hover": {
+                              transform: "rotate(360deg)",
+                              boxShadow: "0 10px 20px rgba(0, 255, 65, 0.1)",
+                            },
                           }}
                         >
                           {skill}
@@ -186,7 +237,7 @@ const SkillsSection = () => {
                 fontFamily: "Courier New, monospace",
               }}
             >
-              &quot;I know kung fu.&quot; - The Matrix
+              &quot;I know gaming.&quot; - The Matrix
             </Typography>
           </Box>
         </motion.div>
