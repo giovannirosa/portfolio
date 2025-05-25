@@ -1,3 +1,4 @@
+"use client";
 import { Box } from "@mui/material";
 import { LazyMotion, domAnimation } from "framer-motion";
 import Header from "@/components/Header";
