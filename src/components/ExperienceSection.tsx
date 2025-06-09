@@ -1,6 +1,4 @@
 "use client";
-import { useRef, useEffect } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
 import {
   Typography,
   Container,
@@ -19,12 +17,14 @@ import {
   TimelineDot,
   TimelineOppositeContent,
 } from "@mui/lab";
+import { motion } from "framer-motion";
 import CodeIcon from "@mui/icons-material/Code";
 import TerminalIcon from "@mui/icons-material/Terminal";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import ComputerIcon from "@mui/icons-material/Computer";
 import StorageIcon from "@mui/icons-material/Storage";
 import PublicIcon from "@mui/icons-material/Public";
+import TypewriterQuote from "./shared/TypewriterQuote";
 
 const experiences = [
   {
@@ -139,33 +139,19 @@ const experiences = [
 ];
 
 const ExperienceSection = () => {
-  const controls = useAnimation();
-  const containerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(containerRef, { once: false, amount: 0.2 });
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [controls, isInView]);
 
   return (
     <Box
       component="section"
       id="experience"
-      ref={containerRef}
-      sx={{
-        py: 10,
-        position: "relative",
-        overflow: "hidden",
-      }}
+      sx={{ pb: { xs: 5, md: 10 }, position: "relative", overflow: "hidden" }}
     >
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <Typography
@@ -195,16 +181,11 @@ const ExperienceSection = () => {
             spoon.
           </Typography>
         </motion.div>
-
         <Timeline
           position={isMobile ? "right" : "alternate"}
           sx={{
-            "& .MuiTimelineItem-root": {
-              minHeight: 0,
-            },
-            "& .MuiTimelineContent-root": {
-              px: { xs: 2, md: 3 },
-            },
+            "& .MuiTimelineItem-root": { minHeight: 0 },
+            "& .MuiTimelineContent-root": { px: { xs: 2, md: 3 } },
             "& .MuiTimelineOppositeContent-root": {
               flex: { xs: 0, md: 1 },
               maxWidth: { xs: "30%", md: "none" },
@@ -220,19 +201,10 @@ const ExperienceSection = () => {
                 }}
               >
                 <motion.div
-                  initial="hidden"
-                  animate={controls}
-                  variants={{
-                    hidden: { opacity: 0, x: index % 2 === 0 ? -50 : 50 },
-                    visible: {
-                      opacity: 1,
-                      x: 0,
-                      transition: {
-                        duration: 0.5,
-                        delay: index * 0.3,
-                      },
-                    },
-                  }}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ amount: 0.2 }}
                 >
                   <Typography
                     variant="body2"
@@ -248,19 +220,10 @@ const ExperienceSection = () => {
 
               <TimelineSeparator>
                 <motion.div
-                  initial="hidden"
-                  animate={controls}
-                  variants={{
-                    hidden: { opacity: 0, scale: 0 },
-                    visible: {
-                      opacity: 1,
-                      scale: 1,
-                      transition: {
-                        duration: 0.3,
-                        delay: index * 0.3 + 0.1,
-                      },
-                    },
-                  }}
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3 }}
+                  viewport={{ amount: 0.2 }}
                 >
                   <TimelineDot color="primary">{exp.icon}</TimelineDot>
                 </motion.div>
@@ -269,19 +232,10 @@ const ExperienceSection = () => {
 
               <TimelineContent sx={{ py: "12px", px: { xs: 1, md: 2 } }}>
                 <motion.div
-                  initial="hidden"
-                  animate={controls}
-                  variants={{
-                    hidden: { opacity: 0, x: index % 2 === 0 ? 50 : -50 },
-                    visible: {
-                      opacity: 1,
-                      x: 0,
-                      transition: {
-                        duration: 0.5,
-                        delay: index * 0.3 + 0.2,
-                      },
-                    },
-                  }}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ amount: 0.2 }}
                   whileHover={{ y: -10 }}
                 >
                   <Paper
@@ -371,19 +325,10 @@ const ExperienceSection = () => {
             </TimelineItem>
           ))}
         </Timeline>
-
-        <Box sx={{ textAlign: "center", mt: 6 }}>
-          <Typography
-            variant="subtitle1"
-            sx={{
-              fontStyle: "italic",
-              color: "text.secondary",
-              fontFamily: "Courier New, monospace",
-            }}
-          >
-            &quot;I know kung fu.&quot; - Neo
-          </Typography>
-        </Box>
+        <TypewriterQuote>
+          &quot;Unfortunately, no one can be told what the Matrix is. You have
+          to see it for yourself.&quot; - Morpheus
+        </TypewriterQuote>
       </Container>
     </Box>
   );

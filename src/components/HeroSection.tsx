@@ -201,7 +201,7 @@ const HeroSection = () => {
       <Box
         sx={{
           position: "absolute",
-          bottom: 32,
+          bottom: { xs: 0, md: 32 },
           left: "50%",
           transform: "translateX(-50%)",
           color: "#00FF41",

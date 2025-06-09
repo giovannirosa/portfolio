@@ -1,6 +1,5 @@
 "use client";
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Box,
   Container,
@@ -10,27 +9,15 @@ import {
   CardContent,
 } from "@mui/material";
 import Image from "next/image";
+import TypewriterQuote from "./shared/TypewriterQuote";
 
 const AboutSection = () => {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  // Adjusted parallax effect thresholds to prevent premature disappearing
-  const imageScale = useTransform(scrollYProgress, [0.1, 0.5], [0.9, 1]);
-  const imageOpacity = useTransform(scrollYProgress, [0.1, 0.5], [0.5, 1]);
-  const textX = useTransform(scrollYProgress, [0.1, 0.5], ["-10px", "0px"]);
-  const textOpacity = useTransform(scrollYProgress, [0.1, 0.5], [0.5, 1]);
-
   return (
     <Box
       component="section"
       id="about"
-      ref={ref}
       sx={{
-        py: 10,
+        py: { xs: 5, md: 10 },
         position: "relative",
         overflow: "hidden",
       }}
@@ -40,7 +27,6 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
         >
           <Typography
             variant="h2"
@@ -61,11 +47,12 @@ const AboutSection = () => {
           <Grid size={{ xs: 12, md: 6 }} sx={{ height: "100%", width: "100%" }}>
             <motion.div
               style={{
-                scale: imageScale,
-                opacity: imageOpacity,
                 height: "100%",
                 width: "100%",
               }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              initial={{ opacity: 0, y: 20, scale: 0.5 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
             >
               <Box sx={{ position: "relative", height: "100%", width: "100%" }}>
                 <Box
@@ -110,7 +97,11 @@ const AboutSection = () => {
           </Grid>
 
           <Grid size={{ xs: 12, md: 6 }}>
-            <motion.div style={{ x: textX, opacity: textOpacity }}>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               <Typography
                 variant="h4"
                 sx={{
@@ -120,7 +111,8 @@ const AboutSection = () => {
                   fontWeight: "bold",
                 }}
               >
-                Computer Scientist & <br />Full Stack Software Engineer
+                Computer Scientist & <br />
+                Full Stack Software Engineer
               </Typography>
 
               <Box sx={{ color: "text.secondary", mb: 2 }}>
@@ -128,12 +120,12 @@ const AboutSection = () => {
                   sx={{ fontFamily: "Courier New, monospace" }}
                   gutterBottom
                 >
-                  Hi! I&apos;m Gio, a passionate software engineer
-                  from Brazil with over 9 years of experience designing and
-                  developing modern, scalable web applications. My journey began
-                  with a deep curiosity about how systems work and grew into a
-                  career focused on creating smart, secure, and connected
-                  digital experiences.
+                  Hi! I&apos;m Gio, a passionate software engineer from Brazil
+                  with over 9 years of experience designing and developing
+                  modern, scalable web applications. My journey began with a
+                  deep curiosity about how systems work and grew into a career
+                  focused on creating smart, secure, and connected digital
+                  experiences.
                 </Typography>
                 <Typography
                   sx={{ fontFamily: "Courier New, monospace" }}
@@ -208,19 +200,10 @@ const AboutSection = () => {
           </Grid>
         </Grid>
 
-        <Box sx={{ textAlign: "center", mt: 4 }}>
-          <Typography
-            variant="body2"
-            sx={{
-              color: "text.secondary",
-              fontStyle: "italic",
-              fontFamily: "Courier New, monospace",
-            }}
-          >
-            &quot;There is a difference between knowing the path and walking the
-            path.&quot; - Morpheus
-          </Typography>
-        </Box>
+        <TypewriterQuote>
+          &quot;There is a difference between knowing the path and walking the
+          path.&quot; - Morpheus
+        </TypewriterQuote>
       </Container>
     </Box>
   );

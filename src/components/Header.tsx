@@ -61,10 +61,9 @@ const Header = () => {
                 flexGrow: 1,
                 fontWeight: 700,
                 fontFamily: '"Poppins", sans-serif',
-                color: "#a3ff00",
               }}
             >
-              Portfolio
+              Giovanni Rosa
             </Typography>
           </motion.div>
 
@@ -84,7 +83,7 @@ const Header = () => {
               aria-label="open drawer"
               edge="end"
               onClick={handleDrawerToggle}
-              sx={{ color: "#a3ff00" }}
+              color="primary"
             >
               <MenuIcon />
             </IconButton>

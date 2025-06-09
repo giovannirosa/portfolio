@@ -2,6 +2,7 @@
 import {
   createTheme,
   ThemeProvider as MuiThemeProvider,
+  responsiveFontSizes,
 } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ReactNode } from "react";
@@ -84,7 +85,7 @@ interface ThemeProviderProps {
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   return (
-    <MuiThemeProvider theme={theme}>
+    <MuiThemeProvider theme={responsiveFontSizes(theme)}>
       <CssBaseline />
       {children}
     </MuiThemeProvider>

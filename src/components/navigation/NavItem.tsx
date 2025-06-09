@@ -17,11 +17,11 @@ const NavItem = ({ id, label, activeSection, onClick }: NavItemProps) => {
     >
       <Button
         onClick={() => onClick(id)}
-        sx={{
+        sx={({ palette }) => ({
           mx: 1,
-          color: activeSection === id ? "#a3ff00" : "white",
+          color: activeSection === id ? palette.primary.main : "white",
           "&:hover": {
-            color: "#a3ff00",
+            color: palette.primary.main,
           },
           position: "relative",
           "&::after":
@@ -33,10 +33,10 @@ const NavItem = ({ id, label, activeSection, onClick }: NavItemProps) => {
                   left: 0,
                   width: "100%",
                   height: "2px",
-                  bgcolor: "#a3ff00",
+                  bgcolor: palette.primary.main,
                 }
               : {},
-        }}
+        })}
       >
         {label}
       </Button>

@@ -31,11 +31,6 @@ const DesktopNav = ({
         startIcon={<DescriptionIcon />}
         sx={{
           ml: 2,
-          bgcolor: "#a3ff00",
-          color: "#000000",
-          "&:hover": {
-            bgcolor: "#84cc16",
-          },
         }}
       >
         Resume

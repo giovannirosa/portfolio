@@ -35,7 +35,7 @@ const MobileDrawer = ({
           boxSizing: "border-box",
           width: 240,
           background: "rgba(0, 0, 0, 0.9)",
-          borderLeft: "1px solid rgba(163, 255, 0, 0.2)",
+          borderLeft: ({ palette }) => `1px solid ${palette.primary.main}`,
         },
       }}
     >
@@ -46,11 +46,10 @@ const MobileDrawer = ({
           sx={{
             fontWeight: 700,
             fontFamily: '"Poppins", sans-serif',
-            color: "#a3ff00",
             mb: 2,
           }}
         >
-          Portfolio
+          Giovanni Rosa
         </Typography>
         <List>
           {navItems.map((item) => (
@@ -62,10 +61,21 @@ const MobileDrawer = ({
                 }}
                 sx={{
                   textAlign: "center",
-                  color: activeSection === item.id ? "#a3ff00" : "white",
+                  color: ({ palette }) =>
+                    activeSection === item.id ? palette.primary.main : "white",
                 }}
               >
-                <ListItemText primary={item.label} />
+                <ListItemText
+                  primary={item.label}
+                  slotProps={{
+                    primary: {
+                      sx: {
+                        fontWeight:
+                          activeSection === item.id ? "bold" : 400,
+                      },
+                    },
+                  }}
+                />
               </ListItemButton>
             </ListItem>
           ))}
@@ -74,14 +84,10 @@ const MobileDrawer = ({
               <Button
                 variant="contained"
                 fullWidth
+                onClick={() =>
+                  window.open("/Resume Giovanni Rosa.pdf", "_blank")
+                }
                 startIcon={<DescriptionIcon />}
-                sx={{
-                  bgcolor: "#a3ff00",
-                  color: "#000000",
-                  "&:hover": {
-                    bgcolor: "#84cc16",
-                  },
-                }}
               >
                 Resume
               </Button>
