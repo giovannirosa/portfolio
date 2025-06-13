@@ -146,7 +146,7 @@ const ExperienceSection = () => {
     <Box
       component="section"
       id="experience"
-      sx={{ pb: { xs: 5, md: 10 }, position: "relative", overflow: "hidden" }}
+      sx={{ pt: { xs: 8, md: 10 }, position: "relative", overflow: "hidden" }}
     >
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <motion.div

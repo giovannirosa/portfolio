@@ -88,7 +88,7 @@ const SkillsSection = () => {
       component="section"
       id="skills"
       sx={{
-        pb: { xs: 5, md: 10 },
+        pt: { xs: 8, md: 10 },
         position: "relative",
         overflow: "hidden",
       }}
