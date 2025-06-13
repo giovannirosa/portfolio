@@ -6,6 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
+import LanguageSection from "@/components/LanguageSection";
 // import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -22,6 +23,7 @@ const Home = () => {
             <AboutSection />
             <SkillsSection />
             <ExperienceSection />
+            <LanguageSection />
             {/* <ProjectsSection /> */}
             <ContactSection />
           </MatrixRain>

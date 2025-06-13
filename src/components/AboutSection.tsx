@@ -7,6 +7,7 @@ import {
   Grid,
   Card,
   CardContent,
+  Paper,
 } from "@mui/material";
 import Image from "next/image";
 import TypewriterQuote from "./shared/TypewriterQuote";
@@ -102,100 +103,118 @@ const AboutSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <Typography
-                variant="h4"
+              <Paper
+                elevation={3}
                 sx={{
-                  mb: 2,
-                  color: "primary.main",
-                  fontFamily: "Courier New, monospace",
-                  fontWeight: "bold",
+                  p: 3,
+                  background: "rgba(13, 2, 8, 0.8)",
+                  border: "1px solid",
+                  borderColor: "primary.main",
+                  backdropFilter: "blur(5px)",
+                  height: "100%",
+                  mx: 0,
+                  "&:hover": {
+                    transform: "translateY(-8px)",
+                    boxShadow: "0 10px 20px rgba(0, 255, 65, 0.1)",
+                  },
                 }}
               >
-                Computer Scientist & <br />
-                Full Stack Software Engineer
-              </Typography>
-
-              <Box sx={{ color: "text.secondary", mb: 2 }}>
                 <Typography
-                  sx={{ fontFamily: "Courier New, monospace" }}
-                  gutterBottom
-                >
-                  Hi! I&apos;m Gio, a passionate software engineer from Brazil
-                  with over 9 years of experience designing and developing
-                  modern, scalable web applications. My journey began with a
-                  deep curiosity about how systems work and grew into a career
-                  focused on creating smart, secure, and connected digital
-                  experiences.
-                </Typography>
-                <Typography
-                  sx={{ fontFamily: "Courier New, monospace" }}
-                  gutterBottom
-                >
-                  With a strong academic background—holding both a
-                  Bachelor&apos;s and a Master&apos;s degree in Computer Science
-                  from UFPR—my expertise lies in crafting full stack solutions
-                  using React, Node.js, Java, Python, and a range of modern
-                  frameworks. I&apos;ve contributed to international and
-                  national projects across various industries, including
-                  aviation, healthcare, IoT, finance, and real estate, working
-                  with clients such as SITA, Schneider, Corvalent, and RCI Bank.
-                </Typography>
-                <Typography
-                  sx={{ fontFamily: "Courier New, monospace" }}
-                  gutterBottom
-                >
-                  Today, I run{" "}
-                  <span style={{ color: "#00FF41" }}>GRDS IT Services</span>,
-                  where I build web platforms that connect to IoT devices,
-                  manage real-time data via MQTT, IoT Core, Aurora, and deploy
-                  cloud-native solutions on AWS and Azure.
-                </Typography>
-                <Typography sx={{ fontFamily: "Courier New, monospace" }}>
-                  When I&apos;m not writing code or solving architecture
-                  puzzles, I&apos;m exploring my interests in IoT, machine
-                  learning, blockchain, and augmented reality—or just enjoying
-                  the latest breakthroughs in tech. Oh, and I also enjoy a
-                  little gaming on the side—keeps me sharp!
-                </Typography>
-              </Box>
-
-              <Box sx={{ mt: 2 }}>
-                <Typography
-                  variant="h6"
+                  variant="h4"
                   sx={{
-                    mb: 1,
-                    color: "secondary.main",
+                    mb: 2,
+                    color: "primary.main",
                     fontFamily: "Courier New, monospace",
                     fontWeight: "bold",
                   }}
                 >
-                  Academic Education
+                  Computer Scientist & <br />
+                  Full Stack Software Engineer
                 </Typography>
-                <Box component="ul" sx={{ listStyleType: "disc", pl: 4 }}>
-                  <Box
-                    component="li"
+
+                <Box sx={{ color: "text.secondary", mb: 2 }}>
+                  <Typography
+                    sx={{ fontFamily: "Courier New, monospace" }}
+                    gutterBottom
+                  >
+                    Hi! I&apos;m Gio, a passionate software engineer from Brazil
+                    with over 9 years of experience designing and developing
+                    modern, scalable web applications. My journey began with a
+                    deep curiosity about how systems work and grew into a career
+                    focused on creating smart, secure, and connected digital
+                    experiences.
+                  </Typography>
+                  <Typography
+                    sx={{ fontFamily: "Courier New, monospace" }}
+                    gutterBottom
+                  >
+                    With a strong academic background—holding both a
+                    Bachelor&apos;s and a Master&apos;s degree in Computer
+                    Science from UFPR—my expertise lies in crafting full stack
+                    solutions using React, Node.js, Java, Python, and a range of
+                    modern frameworks. I&apos;ve contributed to international
+                    and national projects across various industries, including
+                    aviation, healthcare, IoT, finance, and real estate, working
+                    with clients such as SITA, Schneider, Corvalent, and RCI
+                    Bank.
+                  </Typography>
+                  <Typography
+                    sx={{ fontFamily: "Courier New, monospace" }}
+                    gutterBottom
+                  >
+                    Today, I run{" "}
+                    <span style={{ color: "#00FF41" }}>GRDS IT Services</span>,
+                    where I build web platforms that connect to IoT devices,
+                    manage real-time data via MQTT, IoT Core, Aurora, and deploy
+                    cloud-native solutions on AWS and Azure.
+                  </Typography>
+                  <Typography sx={{ fontFamily: "Courier New, monospace" }}>
+                    When I&apos;m not writing code or solving architecture
+                    puzzles, I&apos;m exploring my interests in IoT, machine
+                    learning, blockchain, and augmented reality—or just enjoying
+                    the latest breakthroughs in tech. Oh, and I also enjoy a
+                    little gaming on the side—keeps me sharp!
+                  </Typography>
+                </Box>
+
+                <Box sx={{ mt: 2 }}>
+                  <Typography
+                    variant="h6"
                     sx={{
-                      color: "text.secondary",
                       mb: 1,
+                      color: "secondary.main",
                       fontFamily: "Courier New, monospace",
+                      fontWeight: "bold",
                     }}
                   >
-                    Bachelor in Computer Science, University of Paraná (UFPR)
-                    2014-2019
-                  </Box>
-                  <Box
-                    component="li"
-                    sx={{
-                      color: "text.secondary",
-                      mb: 1,
-                      fontFamily: "Courier New, monospace",
-                    }}
-                  >
-                    Master in Networks and Distributed Systems at NR2 -
-                    University of Paraná (UFPR) - 2020-2023
+                    Academic Education
+                  </Typography>
+                  <Box component="ul" sx={{ listStyleType: "disc", pl: 4 }}>
+                    <Box
+                      component="li"
+                      sx={{
+                        color: "text.secondary",
+                        mb: 1,
+                        fontFamily: "Courier New, monospace",
+                      }}
+                    >
+                      Bachelor in Computer Science, University of Paraná (UFPR)
+                      2014-2019
+                    </Box>
+                    <Box
+                      component="li"
+                      sx={{
+                        color: "text.secondary",
+                        mb: 1,
+                        fontFamily: "Courier New, monospace",
+                      }}
+                    >
+                      Master in Networks and Distributed Systems at NR2 -
+                      University of Paraná (UFPR) - 2020-2023
+                    </Box>
                   </Box>
                 </Box>
-              </Box>
+              </Paper>
             </motion.div>
           </Grid>
         </Grid>
