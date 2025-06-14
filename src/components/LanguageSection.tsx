@@ -6,10 +6,38 @@ import MatrixProgressBar from "./MatrixProgressBar";
 
 const languages = [
   { name: "Portuguese", level: "Native", value: 100 },
-  { name: "English", level: "Proficient (C2)", value: 100 },
-  { name: "Spanish", level: "Intermediate (B1)", value: 50 },
-  { name: "French", level: "Beginner (A1)", value: 10 },
-  { name: "Italian", level: "Beginner (A1)", value: 10 },
+  {
+    name: "English",
+    level: "Proficient (C2)",
+    value: 100,
+    exp: [
+      "Influx English School, 3 years, completed in 2014",
+      "New College Group, 1 month in Manchester (UK), completed in 2015",
+      "Test of English for International Communication (TOEIC), 2014 – grade 975/990",
+      "Test of English as a Foreign Language (TOEFL), 2016 – grade 580/677",
+    ],
+  },
+  {
+    name: "Spanish",
+    level: "Intermediate (B1)",
+    value: 50,
+    exp: [
+      "Can understand and communicate in everyday situations",
+      "Self-taught, basic reading and writing skills",
+    ],
+  },
+  {
+    name: "French",
+    level: "Beginner (A1)",
+    value: 10,
+    exp: ["Self-taught, basic understanding"],
+  },
+  {
+    name: "Italian",
+    level: "Beginner (A1)",
+    value: 10,
+    exp: ["Self-taught, basic understanding"],
+  },
 ];
 
 const LanguageSection = () => {
@@ -19,7 +47,7 @@ const LanguageSection = () => {
       id="languages"
       sx={{ pt: { xs: 8, md: 10 }, position: "relative", overflow: "hidden" }}
     >
-      <Container maxWidth="md" sx={{ position: "relative", zIndex: 1 }}>
+      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,7 +70,6 @@ const LanguageSection = () => {
             align="center"
             sx={{
               color: "text.secondary",
-              maxWidth: "600px",
               mx: "auto",
               mb: 6,
               fontFamily: "Courier New, monospace",
@@ -56,7 +83,7 @@ const LanguageSection = () => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            gap: 3,
+            gap: 4,
             alignItems: "center",
             pb: 6,
           }}
@@ -89,7 +116,6 @@ const LanguageSection = () => {
                   boxShadow: "0 0 24px 4px #00FF4177, 0 2px 24px #000",
                   borderRadius: 3,
                   minWidth: 280,
-                  maxWidth: 400,
                   width: "100%",
                   display: "flex",
                   alignItems: "flex-start",
@@ -162,6 +188,34 @@ const LanguageSection = () => {
                       variant="determinate"
                     />
                   </Box>
+                  {lang.exp && (
+                    <Box sx={{ mt: 2 }}>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: "#00FF41",
+                          fontFamily: "Courier New, monospace",
+                          opacity: 0.8,
+                        }}
+                      >
+                        Experience:
+                      </Typography>
+                      <ul style={{ paddingLeft: 20, marginTop: 4 }}>
+                        {lang.exp.map((item) => (
+                          <li
+                            key={item}
+                            style={{
+                              color: "#00FF41",
+                              fontFamily: "Courier New, monospace",
+                              opacity: 0.8,
+                            }}
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </Box>
+                  )}
                 </Box>
               </Paper>
             </motion.div>

@@ -8,9 +8,11 @@ import {
   Card,
   CardContent,
   Paper,
+  Stack,
 } from "@mui/material";
 import Image from "next/image";
 import TypewriterQuote from "./shared/TypewriterQuote";
+import { School } from "@mui/icons-material";
 
 const AboutSection = () => {
   return (
@@ -178,17 +180,20 @@ const AboutSection = () => {
                 </Box>
 
                 <Box sx={{ mt: 2 }}>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      mb: 1,
-                      color: "secondary.main",
-                      fontFamily: "Courier New, monospace",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    Academic Education
-                  </Typography>
+                  <Stack direction="row" alignItems="center" spacing={2}>
+                    <School />
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        mb: 1,
+                        color: "secondary.main",
+                        fontFamily: "Courier New, monospace",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      Academic Education
+                    </Typography>
+                  </Stack>
                   <Box component="ul" sx={{ listStyleType: "disc", pl: 4 }}>
                     <Box
                       component="li"
