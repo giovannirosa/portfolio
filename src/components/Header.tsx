@@ -61,7 +61,9 @@ const Header = () => {
                 flexGrow: 1,
                 fontWeight: 700,
                 fontFamily: '"Poppins", sans-serif',
+                cursor: "pointer",
               }}
+              onClick={() => scrollToSection("home")}
             >
               Giovanni Rosa
             </Typography>

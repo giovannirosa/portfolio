@@ -220,7 +220,9 @@ const SkillsSection = () => {
               Always Learning
             </Typography>
 
-            <TypewriterQuote noMarginTop>&quot;I know gaming.&quot; - Gio</TypewriterQuote>
+            <TypewriterQuote noMarginTop>
+              &quot;I know gaming.&quot; - Gio
+            </TypewriterQuote>
           </Box>
         </motion.div>
       </Container>

@@ -11,6 +11,7 @@ import LanguageSection from "@/components/LanguageSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import MatrixRain from "@/components/MatrixRain";
+import CertificationsSection from "@/components/CertificationsSection";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
             <HeroSection />
             <AboutSection />
             <SkillsSection />
+            <CertificationsSection />
             <ExperienceSection />
             <LanguageSection />
             {/* <ProjectsSection /> */}
