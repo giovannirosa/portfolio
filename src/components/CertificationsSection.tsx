@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import {
   Box,
   Container,
@@ -108,6 +108,35 @@ const certifications = [
   },
 ];
 
+const paperContainerVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      when: "beforeChildren", // Animate paper first, then stagger children
+      staggerChildren: 0.08, // Stagger delay for each certification item
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: (i: number) => ({
+    opacity: 0,
+    x: i % 2 === 0 ? -100 : 100, // Alternating start position: left (-100px) or right (100px)
+  }),
+  visible: {
+    opacity: 1,
+    x: 0, // Animate to natural position (0px offset)
+    transition: {
+      type: "tween",
+      duration: 1, // Slightly faster for individual lines
+      ease: "easeOut",
+    },
+  },
+};
+
 const CertificationsSection = () => (
   <Box
     component="section"
@@ -145,78 +174,93 @@ const CertificationsSection = () => (
           Unlocking achievements in the Matrix. Each certification is a new key
           to the digital world.
         </Typography>
-        <Paper
-          elevation={3}
-          sx={{
-            p: 2,
-            background: "rgba(13, 2, 8, 0.8)",
-            border: "1px solid",
-            borderColor: "primary.main",
-            backdropFilter: "blur(5px)",
-            minWidth: 280,
-            width: "100%",
-            mb: 2,
-            fontFamily: "Courier New, monospace",
-          }}
+        <motion.div
+          variants={paperContainerVariants}
+          initial="hidden"
+          whileInView="visible"
         >
-          {certifications.map((cert, index) => (
-            <Grid
-              key={cert.title}
-              container
-              spacing={2}
-              justifyContent="space-between"
-              sx={{
-                mb: 2,
-                "&:last-child": { mb: 0 },
-              }}
-            >
-              <Grid size={{ xs: 12, md: 7 }}>
-                <Typography sx={{ color: "#00FF41", fontWeight: "bold" }}>
-                  {cert.title}
-                </Typography>
-              </Grid>
-              <Grid size={{ xs: cert.credential ? 6 : 12, md: 3 }}>
-                <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                  {cert.issuer ? `${cert.issuer}, ` : ""}
-                  {cert.year}
-                </Typography>
-              </Grid>
-              <Grid size={{ xs: 6, md: 2 }}>
-                {cert.credential ? (
-                  <Typography
-                    variant="body2"
-                    textAlign="right"
-                    sx={{
-                      color: "primary.main",
-                      textDecoration: "underline",
-                      mt: 0.5,
-                    }}
-                  >
-                    <a
-                      href={cert.credential}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "inherit", textDecoration: "none" }}
-                    >
-                      View Credential
-                    </a>
-                  </Typography>
-                ) : (
-                  <Box />
-                )}
-              </Grid>
-              {index < certifications.length - 1 && (
-                <Divider
+          <Paper
+            elevation={3}
+            sx={{
+              p: 2,
+              background: "rgba(13, 2, 8, 0.8)",
+              border: "1px solid",
+              borderColor: "primary.main",
+              backdropFilter: "blur(5px)",
+              minWidth: 280,
+              width: "100%",
+              mb: 2,
+              fontFamily: "Courier New, monospace",
+            }}
+          >
+            {certifications.map((cert, index) => (
+              <motion.div
+                key={cert.title}
+                variants={itemVariants}
+                custom={index} // Pass index for alternating animation
+                style={{ overflow: "hidden" }} // Crucial to hide the animating overflow
+              >
+                <Grid
+                  container
+                  spacing={2}
+                  justifyContent="space-between"
                   sx={{
-                    width: "100%",
-                    borderColor: "primary.main",
-                    my: 1,
+                    mb: 2,
+                    "&:last-child": { mb: 0 },
                   }}
-                />
-              )}
-            </Grid>
-          ))}
-        </Paper>
+                >
+                  <Grid size={{ xs: 12, md: 7 }}>
+                    <Typography sx={{ color: "#00FF41", fontWeight: "bold" }}>
+                      {cert.title}
+                    </Typography>
+                  </Grid>
+                  <Grid size={{ xs: cert.credential ? 6 : 12, md: 3 }}>
+                    <Typography
+                      variant="body2"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      {cert.issuer ? `${cert.issuer}, ` : ""}
+                      {cert.year}
+                    </Typography>
+                  </Grid>
+                  <Grid size={{ xs: 6, md: 2 }}>
+                    {cert.credential ? (
+                      <Typography
+                        variant="body2"
+                        textAlign="right"
+                        sx={{
+                          color: "primary.main",
+                          textDecoration: "underline",
+                          mt: 0.5,
+                        }}
+                      >
+                        <a
+                          href={cert.credential}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: "inherit", textDecoration: "none" }}
+                        >
+                          View Credential
+                        </a>
+                      </Typography>
+                    ) : (
+                      <Box />
+                    )}
+                  </Grid>
+                  {index < certifications.length - 1 && (
+                    <Divider
+                      sx={{
+                        width: "100%",
+                        borderColor: "primary.main",
+                        my: 1,
+                      }}
+                    />
+                  )}
+                </Grid>
+              </motion.div>
+            ))}
+          </Paper>
+        </motion.div>
         <TypewriterQuote>
           &quot;The Matrix is everywhere. It is all around us. Even now, in this
           very room.&quot; - Morpheus

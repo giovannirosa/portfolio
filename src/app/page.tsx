@@ -12,6 +12,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import MatrixRain from "@/components/MatrixRain";
 import CertificationsSection from "@/components/CertificationsSection";
+import PapersSection from "@/components/PapersSection";
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
             <AboutSection />
             <SkillsSection />
             <CertificationsSection />
+            <PapersSection />
             <ExperienceSection />
             <LanguageSection />
             {/* <ProjectsSection /> */}
