@@ -191,6 +191,10 @@ const CertificationsSection = () => (
               width: "100%",
               mb: 2,
               fontFamily: "Courier New, monospace",
+              boxShadow: "0 0 24px 4px #00FF4177, 0 2px 24px #000",
+              "&:hover": {
+                boxShadow: "0 0 32px 8px #00FF41CC, 0 2px 32px #000",
+              },
             }}
           >
             {certifications.map((cert, index) => (

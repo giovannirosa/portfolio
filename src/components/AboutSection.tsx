@@ -115,9 +115,9 @@ const AboutSection = () => {
                   backdropFilter: "blur(5px)",
                   height: "100%",
                   mx: 0,
+                  boxShadow: "0 0 24px 4px #00FF4177, 0 2px 24px #000",
                   "&:hover": {
-                    transform: "translateY(-8px)",
-                    boxShadow: "0 10px 20px rgba(0, 255, 65, 0.1)",
+                    boxShadow: "0 0 32px 8px #00FF41CC, 0 2px 32px #000",
                   },
                 }}
               >

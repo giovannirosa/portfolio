@@ -7,12 +7,13 @@ import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import LanguageSection from "@/components/LanguageSection";
-// import ProjectsSection from "@/components/ProjectsSection";
+import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import MatrixRain from "@/components/MatrixRain";
 import CertificationsSection from "@/components/CertificationsSection";
 import PapersSection from "@/components/PapersSection";
+import InterestsSection from "@/components/InterestsSection";
 
 const Home = () => {
   return (
@@ -28,7 +29,8 @@ const Home = () => {
             <PapersSection />
             <ExperienceSection />
             <LanguageSection />
-            {/* <ProjectsSection /> */}
+            <ProjectsSection />
+            <InterestsSection />
             <ContactSection />
           </MatrixRain>
         </Box>

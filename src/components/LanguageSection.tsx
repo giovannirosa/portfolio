@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Box, Container, Typography, Paper } from "@mui/material";
 import PublicIcon from "@mui/icons-material/Public";
 import MatrixProgressBar from "./MatrixProgressBar";
+import TypewriterQuote from "./shared/TypewriterQuote";
 
 const languages = [
   { name: "Portuguese", level: "Native", value: 100 },
@@ -221,6 +222,9 @@ const LanguageSection = () => {
             </motion.div>
           ))}
         </Box>
+        <TypewriterQuote noMarginTop>
+          &quot;Your mind makes it real.&quot; - Morpheus
+        </TypewriterQuote>
       </Container>
     </Box>
   );

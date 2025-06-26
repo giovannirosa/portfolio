@@ -156,7 +156,7 @@ const PapersSection = () => {
                 initial={{ opacity: 0, scale: 0.7 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                viewport={{ amount: 0.3 }}
+                viewport={{ amount: 0.1 }}
               >
                 <Paper
                   elevation={6}
