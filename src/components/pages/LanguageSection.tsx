@@ -2,8 +2,8 @@
 import { motion } from "framer-motion";
 import { Box, Container, Typography, Paper } from "@mui/material";
 import PublicIcon from "@mui/icons-material/Public";
-import MatrixProgressBar from "./MatrixProgressBar";
-import TypewriterQuote from "./shared/TypewriterQuote";
+import MatrixProgressBar from "../shared/MatrixProgressBar";
+import TypewriterQuote from "../shared/TypewriterQuote";
 
 const languages = [
   { name: "Portuguese", level: "Native", value: 100 },

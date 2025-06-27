@@ -24,7 +24,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SendIcon from "@mui/icons-material/Send";
 import PersonIcon from "@mui/icons-material/Person";
 import SubjectIcon from "@mui/icons-material/Subject";
-import TypewriterQuote from "./shared/TypewriterQuote";
+import TypewriterQuote from "../shared/TypewriterQuote";
 
 const FORMSUBMIT_URL =
   "https://formsubmit.co/ajax/d130e097a44e9510594f7400977741b2";

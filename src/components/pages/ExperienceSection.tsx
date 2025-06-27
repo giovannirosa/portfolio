@@ -24,7 +24,7 @@ import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import ComputerIcon from "@mui/icons-material/Computer";
 import StorageIcon from "@mui/icons-material/Storage";
 import PublicIcon from "@mui/icons-material/Public";
-import TypewriterQuote from "./shared/TypewriterQuote";
+import TypewriterQuote from "../shared/TypewriterQuote";
 
 const experiences = [
   {

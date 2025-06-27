@@ -10,7 +10,7 @@ import {
   Stack,
 } from "@mui/material";
 import { motion } from "framer-motion";
-import TypewriterQuote from "./shared/TypewriterQuote";
+import TypewriterQuote from "../shared/TypewriterQuote";
 
 const projects = [
   {

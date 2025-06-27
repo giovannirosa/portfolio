@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Box, Container, Typography, Paper, Chip, Link } from "@mui/material";
-import TypewriterQuote from "./shared/TypewriterQuote";
+import TypewriterQuote from "../shared/TypewriterQuote";
 import { useState } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Collapse from "@mui/material/Collapse";

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import ThemeProvider from "@/components/ThemeProvider";
+import ThemeProvider from "@/provider/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Giovanni Rosa | Software Engineer Portfolio",

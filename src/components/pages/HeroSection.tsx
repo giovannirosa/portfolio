@@ -5,8 +5,13 @@ import { Typography, Container, Button, Stack, Box } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import EmailIcon from "@mui/icons-material/Email";
+import { AutoAwesome } from "@mui/icons-material";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  readonly setOpen: (open: boolean) => void;
+}
+
+const HeroSection = ({ setOpen }: HeroSectionProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -63,7 +68,7 @@ const HeroSection = () => {
                 sx={{
                   color: "#00FF41",
                   fontWeight: 500,
-                  mb: 1,
+                  mb: {xs: 0, lg: 1},
                   fontFamily: "Courier New, monospace",
                 }}
               >
@@ -75,7 +80,7 @@ const HeroSection = () => {
                 sx={{
                   fontSize: { xs: "2.5rem", sm: "3.5rem", md: "4.5rem" },
                   fontWeight: 700,
-                  mb: 2,
+                  mb: {xs: 0, lg: 2},
                   background: "linear-gradient(to right, #00FF41, #07A64B)",
                   backgroundClip: "text",
                   textFillColor: "transparent",
@@ -92,7 +97,7 @@ const HeroSection = () => {
                 sx={{
                   fontSize: { xs: "1.75rem", sm: "2.25rem", md: "3rem" },
                   fontWeight: 700,
-                  mb: 3,
+                  mb: {xs: 1, lg: 3},
                   color: "text.primary",
                   fontFamily: "Courier New, monospace",
                 }}
@@ -147,6 +152,23 @@ const HeroSection = () => {
                   }}
                 >
                   Take The Red Pill
+                </Button>
+                <Button
+                  variant="contained"
+                  size="large"
+                  startIcon={<AutoAwesome />}
+                  onClick={() => setOpen(true)}
+                  sx={{
+                    bgcolor: "#00FF41",
+                    color: "#000000",
+                    "&:hover": {
+                      bgcolor: "#07A64B",
+                    },
+                    px: 3,
+                    py: 1.5,
+                  }}
+                >
+                  Ask The Oracle
                 </Button>
                 <Button
                   variant="outlined"

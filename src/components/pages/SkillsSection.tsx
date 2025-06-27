@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Box, Container, Typography, Grid, Paper } from "@mui/material";
-import TypewriterQuote from "./shared/TypewriterQuote";
+import TypewriterQuote from "../shared/TypewriterQuote";
 
 const skills = [
   {

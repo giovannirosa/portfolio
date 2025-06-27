@@ -8,7 +8,7 @@ import {
   Divider,
   Grid,
 } from "@mui/material";
-import TypewriterQuote from "./shared/TypewriterQuote";
+import TypewriterQuote from "../shared/TypewriterQuote";
 
 const certifications = [
   {

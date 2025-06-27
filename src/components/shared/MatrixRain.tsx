@@ -49,7 +49,7 @@ const MatrixRainParticles = () => {
               enable: true,
               force: 60, // The strength of the parallax effect
               smooth: 10, // How smooth the parallax effect is
-            }
+            },
           },
         },
         modes: {
@@ -178,7 +178,9 @@ const MatrixRain = ({
       style={{ position: "relative", overflow: "hidden", background: "#000" }}
     >
       <MatrixRainParticles />
-      <div style={{ position: "relative", zIndex: 1 }}>{children}</div>
+      <div style={{ position: "relative", zIndex: 1, height: "100%" }}>
+        {children}
+      </div>
     </div>
   );
 };

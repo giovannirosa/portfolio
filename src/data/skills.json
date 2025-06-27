@@ -1,0 +1,85 @@
+[
+  {
+    "category": "Frontend",
+    "items": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "AngularJS",
+      "Angular 2+",
+      "Vue.js",
+      "React Native",
+      "HTML",
+      "CSS",
+      "JSON",
+      "Material UI"
+    ]
+  },
+  {
+    "category": "Backend",
+    "items": [
+      "Node.js",
+      "SST",
+      "Java",
+      "C",
+      "C++",
+      "Spring Boot",
+      "Python",
+      "Django REST Framework",
+      "RESTful APIs"
+    ]
+  },
+  {
+    "category": "Protocols",
+    "items": [
+      "HTTP",
+      "MQTT",
+      "UDP",
+      "TCP/IP",
+      "RTSP",
+      "HLS",
+      "SSH",
+      "SMTP",
+      "DNS",
+      "IP"
+    ]
+  },
+  {
+    "category": "Database",
+    "items": [
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "InfluxDB",
+      "Oracle",
+      "DynamoDB"
+    ]
+  },
+  {
+    "category": "DevOps",
+    "items": [
+      "Git",
+      "Gitlab Pipelines",
+      "Docker",
+      "AWS",
+      "Azure",
+      "Google Cloud"
+    ]
+  },
+  {
+    "category": "Tools",
+    "items": [
+      "JIRA",
+      "Scrum",
+      "SVN",
+      "Mininet",
+      "VS Code",
+      "Chrome DevTools",
+      "Postman",
+      "Figma",
+      "ns-3",
+      "XML"
+    ]
+  }
+]

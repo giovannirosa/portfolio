@@ -11,7 +11,7 @@ import {
   Stack,
 } from "@mui/material";
 import Image from "next/image";
-import TypewriterQuote from "./shared/TypewriterQuote";
+import TypewriterQuote from "../shared/TypewriterQuote";
 import { School } from "@mui/icons-material";
 
 const AboutSection = () => {

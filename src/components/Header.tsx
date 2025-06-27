@@ -16,7 +16,11 @@ import MobileDrawer from "./navigation/MobileDrawer";
 import { NAV_ITEMS } from "./navigation/constants";
 import { useScrollActive } from "./navigation/useScrollActive";
 
-const Header = () => {
+interface HeaderProps {
+  chatOpen: boolean;
+}
+
+const Header = ({ chatOpen }: HeaderProps) => {
   const activeSection = useScrollActive();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const trigger = useScrollTrigger({
@@ -40,6 +44,7 @@ const Header = () => {
       position="fixed"
       color="transparent"
       sx={{
+        display: chatOpen ? "none" : "flex",
         background: trigger ? "rgba(0, 0, 0, 0.8)" : "transparent",
         backdropFilter: trigger ? "blur(10px)" : "none",
         boxShadow: trigger ? "0 4px 20px rgba(0, 0, 0, 0.1)" : "none",

@@ -2,7 +2,7 @@
 import { Box, Container, Typography, Chip, Stack } from "@mui/material";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import TypewriterQuote from "./shared/TypewriterQuote";
+import TypewriterQuote from "../shared/TypewriterQuote";
 
 const interests = [
   {
