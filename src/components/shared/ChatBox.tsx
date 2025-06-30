@@ -10,12 +10,21 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import { useEffect, useRef } from "react";
 
 export default function ChatBox() {
   const theme = useTheme();
   const { messages, input, handleInputChange, handleSubmit } = useChat({
     experimental_throttle: 50,
   });
+
+  const bottomRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (bottomRef.current) {
+      bottomRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [messages]);
 
   return (
     <Box
@@ -72,6 +81,7 @@ export default function ChatBox() {
             </Paper>
           </ListItem>
         ))}
+        <div ref={bottomRef} />
       </List>
 
       {/* ===== Input bar pinned at bottom ===== */}
@@ -91,7 +101,7 @@ export default function ChatBox() {
           fullWidth
           value={input}
           onChange={handleInputChange}
-          placeholder="Ask me about my portfolio…"
+          placeholder="Ask The Oracle about me..."
           size="small"
           sx={{
             background: "black",

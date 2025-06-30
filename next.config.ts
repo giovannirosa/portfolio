@@ -9,4 +9,7 @@ const pwaConfig = {
 
 export default withPWA(pwaConfig)({
   reactStrictMode: true,
+  turbopack: {
+    resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.json'],
+  },
 })

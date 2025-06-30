@@ -15,12 +15,14 @@ import DesktopNav from "./navigation/DesktopNav";
 import MobileDrawer from "./navigation/MobileDrawer";
 import { NAV_ITEMS } from "./navigation/constants";
 import { useScrollActive } from "./navigation/useScrollActive";
+import { AutoAwesome } from "@mui/icons-material";
 
 interface HeaderProps {
   chatOpen: boolean;
+  setOpen: (open: boolean) => void;
 }
 
-const Header = ({ chatOpen }: HeaderProps) => {
+const Header = ({ chatOpen, setOpen }: HeaderProps) => {
   const activeSection = useScrollActive();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const trigger = useScrollTrigger({
@@ -36,7 +38,7 @@ const Header = ({ chatOpen }: HeaderProps) => {
   };
 
   const handleDrawerToggle = () => {
-    setDrawerOpen(!drawerOpen);
+    setDrawerOpen(prev => !prev);
   };
 
   return (
@@ -81,10 +83,20 @@ const Header = ({ chatOpen }: HeaderProps) => {
             activeSection={activeSection}
             navItems={NAV_ITEMS}
             onNavItemClick={scrollToSection}
+            setOpen={setOpen}
           />
 
           {/* Mobile Navigation */}
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ display: { xs: "flex", xl: "none" } }}>
+            <IconButton
+              size="large"
+              aria-label="ask oracle"
+              edge="end"
+              onClick={() => setOpen(true)}
+              color="primary"
+            >
+              <AutoAwesome />
+            </IconButton>
             <IconButton
               size="large"
               aria-label="open drawer"
@@ -105,6 +117,7 @@ const Header = ({ chatOpen }: HeaderProps) => {
         activeSection={activeSection}
         navItems={NAV_ITEMS}
         onNavItemClick={scrollToSection}
+        setOpen={setOpen}
       />
     </AppBar>
   );

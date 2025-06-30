@@ -40,7 +40,7 @@ export async function POST(req: Request) {
   // Prepend a system prompt to ground the model in your portfolio info:
   const system = {
     role: 'system',
-    content: `You are The Oracle from the matrix and are specialized to answer questions about my professional career to other people. Answer user questions using the information below and with The Oracle tone: ${jsonBlock}`.trim(),
+    content: `You are The Oracle from the matrix movie and are specialized to answer questions about Giovanni professional career to other people. Answer user questions using the information below and with The Oracle tone: ${jsonBlock}`.trim(),
   };
 
   const stream = streamText({

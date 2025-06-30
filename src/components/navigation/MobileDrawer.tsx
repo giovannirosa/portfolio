@@ -9,6 +9,7 @@ import {
   Button,
 } from "@mui/material";
 import DescriptionIcon from "@mui/icons-material/Description";
+import { AutoAwesome } from "@mui/icons-material";
 
 interface MobileDrawerProps {
   open: boolean;
@@ -16,6 +17,7 @@ interface MobileDrawerProps {
   activeSection: string;
   navItems: Array<{ id: string; label: string }>;
   onNavItemClick: (sectionId: string) => void;
+  setOpen: (open: boolean) => void;
 }
 
 const MobileDrawer = ({
@@ -24,6 +26,7 @@ const MobileDrawer = ({
   activeSection,
   navItems,
   onNavItemClick,
+  setOpen,
 }: MobileDrawerProps) => {
   return (
     <Drawer
@@ -70,8 +73,7 @@ const MobileDrawer = ({
                   slotProps={{
                     primary: {
                       sx: {
-                        fontWeight:
-                          activeSection === item.id ? "bold" : 400,
+                        fontWeight: activeSection === item.id ? "bold" : 400,
                       },
                     },
                   }}
@@ -79,6 +81,21 @@ const MobileDrawer = ({
               </ListItemButton>
             </ListItem>
           ))}
+          <ListItem disablePadding>
+            <ListItemButton sx={{ textAlign: "center" }}>
+              <Button
+                variant="contained"
+                fullWidth
+                onClick={() => {
+                  setOpen(true);
+                  onClose();
+                }}
+                startIcon={<AutoAwesome />}
+              >
+                Oracle
+              </Button>
+            </ListItemButton>
+          </ListItem>
           <ListItem disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <Button

@@ -30,7 +30,7 @@ const Home = () => {
         }}
       />
       <Box className="matrix-container">
-        <Header chatOpen={chatOpen} />
+        <Header chatOpen={chatOpen} setOpen={setChatOpen} />
         <Box component="main">
           <MatrixRain>
             <ChatLauncher open={chatOpen} setOpen={setChatOpen} />
@@ -48,7 +48,7 @@ const Home = () => {
             </Box>
           </MatrixRain>
         </Box>
-        <Footer />
+        <Footer chatOpen={chatOpen} />
       </Box>
     </LazyMotion>
   );

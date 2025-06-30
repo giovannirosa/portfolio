@@ -6,10 +6,15 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import { NAV_ITEMS } from "./navigation/constants";
 
-const Footer = () => {
+interface FooterProps {
+  chatOpen: boolean;
+}
+
+const Footer = ({ chatOpen }: FooterProps) => {
   return (
     <Box
       component="footer"
+      visibility={chatOpen ? 'hidden' : 'visible'}
       sx={{
         py: 6,
         position: "relative",

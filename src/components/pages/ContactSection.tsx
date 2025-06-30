@@ -70,10 +70,6 @@ const ContactSection = () => {
         }),
       });
 
-      const data = await response.json();
-
-      console.log({ response, data });
-
       if (response.ok) {
         setSnackbar({
           open: true,
@@ -282,16 +278,6 @@ const ContactSection = () => {
                   &quot;I&apos;m trying to free your mind, Neo. But I can only
                   show you the door. You&apos;re the one that has to walk
                   through it.&quot;
-                </Typography>
-                <Typography
-                  sx={{
-                    mt: 1,
-                    fontStyle: "italic",
-                    color: "text.secondary",
-                    fontFamily: "Courier New, monospace",
-                  }}
-                >
-                  Currently available for new projects and collaborations.
                 </Typography>
               </Box>
             </motion.div>

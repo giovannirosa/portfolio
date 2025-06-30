@@ -144,8 +144,6 @@ const MatrixRainParticles = () => {
     []
   );
 
-  console.log({ init });
-
   if (init) {
     return (
       <Particles
