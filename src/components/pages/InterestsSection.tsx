@@ -8,27 +8,27 @@ const interests = [
   {
     title: "Internet of Things",
     description:
-      "My most significant interest is Computing because, in my view, the future will depend on how the various products will interact with the Internet, using the information to have a significant impact on people's daily lives.",
+      "A core area of my work and research, focused on how connected devices interact, exchange data, and enforce security, privacy, and reliability in real-world environments.",
   },
   {
     title: "Augmented Reality",
     description:
-      "Another critical area that will develop more and more as technology advances. It should also impact people's routines; it will be key for the big cities of the future.",
+      "An area of interest for its potential to bridge digital systems and physical environments, particularly in urban, industrial, and context-aware applications.",
   },
   {
     title: "Machine Learning",
     description:
-      "Considering the amount of data people generate today, their analysis and processing are becoming increasingly important for commercial and social purposes.",
+      "Explored as a tool to extract insight and adaptive behavior from large-scale data, especially when combined with IoT, security, and user behavior analysis.",
   },
   {
     title: "Blockchain",
     description:
-      "This innovative technology is the next level for secure and resilient contracts with less bureaucracy through a decentralized and more efficient system.",
+      "Studied for its applications in trust, decentralization, and verifiable systems, particularly in scenarios requiring transparency, resilience, and reduced reliance on centralized control.",
   },
   {
     title: "Crypto Coins",
     description:
-      "It is not clear what the role of these new currencies will be in the future, but their concept is very innovative and helps society not to depend on monetary policies centralized in the figure of a State.",
+      "An area of interest from a systems and protocol perspective, focusing on consensus mechanisms, incentives, and the security properties of decentralized networks.",
   },
 ];
 
@@ -57,7 +57,7 @@ const InterestsSection = () => {
               fontFamily: "Courier New, monospace",
             }}
           >
-            Greatest Interests
+            Areas of Focus & Curiosity
           </Typography>
           <Typography
             align="center"
@@ -68,8 +68,8 @@ const InterestsSection = () => {
               fontFamily: "Courier New, monospace",
             }}
           >
-            The future is shaped by curiosity. Here are the fields that inspire
-            me to build, learn, and innovate.
+            Domains that guide my research, experimentation, and long-term
+            technical direction.
           </Typography>
         </motion.div>
         <Stack

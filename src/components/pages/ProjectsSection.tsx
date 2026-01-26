@@ -16,40 +16,40 @@ const projects = [
   {
     title: "Blackjack",
     period: "2015",
-    description: `My first app, a blackjack game to develop my Java 8 knowledge. I used Java 8 and JavaFX, which were my first professional technologies at the time.`,
+    description: `Early learning project developed to explore Java 8 and JavaFX concepts, focusing on object-oriented design and desktop application development.`,
     link: "https://github.com/giovannirosa/blackjack",
   },
   {
     title: "Workflow Manager",
     period: "2016 - 2017",
-    description: `I developed a system to assist in upgrading and implementing the international project SITA - Airfare Insight, where the MySQL database is powered by Excel spreadsheets, transforming them into JSON.`,
+    description: `Internal tooling developed to support data migration and upgrades for the SITA Airfare Insight project, transforming Excel-based workflows into structured JSON data backed by MySQL.`,
   },
   {
     title: "Dionysus",
     period: "2017 - 2018",
-    description: `I developed this inventory and sales control system for a bar. I used Java 8 and JavaFX, which were my most advanced knowledge at the time, being a desktop application integrated with an API of the EPSON TM-T20 laser printer.`,
+    description: `Desktop inventory and sales management system developed for a small business, built with Java 8 and JavaFX and integrated with EPSON TM-T20 fiscal printer APIs.`,
   },
   {
     title: "Database Packager",
     period: "2018",
-    description: `I developed a system to extract files from an SVN repository, present them in a friendly interface and export them in a compressed form in .zip.`,
+    description: `Utility tool designed to extract, organize, and package selected files from SVN repositories, providing a user-friendly interface and compressed export for deployment workflows.`,
   },
   {
     title: "Mercurius",
-    period: "2018 - unfinished",
-    description: `I started to develop a system for complete control of a trade, including its customers, services, stock, calendar, and cashier for a salon. I used Spring Boot on the backend and Angular 6 on the frontend, a responsive web application that can be accessed on any device.`,
+    period: "2018",
+    description: `Experimental web platform prototype designed to manage customers, services, inventory, scheduling, and payments for small businesses, built with Spring Boot and Angular. Development was intentionally discontinued as a learning-focused architectural exercise.`,
   },
   {
     title: "Matrix Portfolio",
     period: "2025",
-    description: `This portfolio is a personal project that showcases my skills and projects in a creative way, inspired by the Matrix universe. It features a unique design with a terminal-like interface, animations, and interactive elements.`,
+    description: `Personal technical showcase built to explore advanced UI animation, interaction design, and narrative-driven presentation using React, Framer Motion, and a Matrix-inspired visual language.`,
     link: "https://github.com/giovannirosa/portfolio",
   },
 ];
 
 const academicHighlights = [
   {
-    description: `Implementation of a Superpipeline using VHDL.`,
+    description: `Design and implementation of a superpipelined processor architecture using VHDL.`,
   },
   {
     description: `Resolution of linear systems using conjugated gradient method optimized and implemented in C.`,
@@ -61,7 +61,7 @@ const academicHighlights = [
     description: `Graph implementation and resolution of the minimum color problem in C.`,
   },
   {
-    description: `Algorithm for congestion control of a UDP network in C++.`,
+    description: `Design and implementation of a custom UDP congestion control algorithm in C++.`,
   },
 ];
 
@@ -89,7 +89,7 @@ const ProjectsSection = () => {
               fontFamily: "Courier New, monospace",
             }}
           >
-            Personal Projects
+            Selected Projects & Technical Experiments
           </Typography>
           <Typography
             align="center"
@@ -100,8 +100,8 @@ const ProjectsSection = () => {
               fontFamily: "Courier New, monospace",
             }}
           >
-            A selection of my personal, professional, and academic
-            projects—where code meets creativity and real-world impact.
+            A selection of technical experiments and systems developed across
+            different stages of my engineering career.
           </Typography>
           <Grid container spacing={4} alignItems="stretch">
             {projects.map((project) => (
@@ -111,7 +111,7 @@ const ProjectsSection = () => {
                   xs: 12,
                   md:
                     projects.length % 2 === 1 &&
-                    projects[projects.length - 1].title === project.title
+                    projects.at(-1)?.title === project.title
                       ? 12
                       : 6,
                 }}
@@ -199,7 +199,7 @@ const ProjectsSection = () => {
                 fontWeight: "bold",
               }}
             >
-              Academic Highlights & GitHub
+              Academic & Low-Level Systems Highlights
             </Typography>
             <Paper
               elevation={6}

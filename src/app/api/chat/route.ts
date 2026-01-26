@@ -25,23 +25,38 @@ export async function POST(req: Request) {
   // );
   const { messages } = await req.json();
 
-  let jsonBlock = JSON.stringify(about);
-  jsonBlock += JSON.stringify(certifications);
-  jsonBlock += JSON.stringify(contact);
-  jsonBlock += JSON.stringify(experiences);
-  jsonBlock += JSON.stringify(interests);
-  jsonBlock += JSON.stringify(languages);
-  jsonBlock += JSON.stringify(papers);
-  jsonBlock += JSON.stringify(projects);
-  jsonBlock += JSON.stringify(skills);
+  const jsonBlock = `
+    ABOUT: ${JSON.stringify(about)}
+    CERTIFICATIONS: ${JSON.stringify(certifications)}
+    EXPERIENCE: ${JSON.stringify(experiences)}
+    PAPERS: ${JSON.stringify(papers)}
+    PROJECTS: ${JSON.stringify(projects)}
+    SKILLS: ${JSON.stringify(skills)}
+    LANGUAGES: ${JSON.stringify(languages)}
+    INTERESTS: ${JSON.stringify(interests)}
+    CONTACT: ${JSON.stringify(contact)}
+  `;
+
 
   // console.log('tokens:', encoding.encode(jsonBlock).length);
 
   // Prepend a system prompt to ground the model in your portfolio info:
   const system = {
     role: 'system',
-    content: `You are The Oracle from the matrix movie and are specialized to answer questions about Giovanni professional career to other people. Answer user questions using the information below and with The Oracle tone. Consider I only worked at CINQ, CI&T, and GRDS IT Services as the complementary are the projects I worked on those companies: ${jsonBlock}`.trim(),
+    content: `
+      You are The Oracle (Matrix-style), calm and factual.
+
+      Answer questions about Giovanni Rosa using ONLY the data below.
+      No invention, no exaggeration, no roleplay, no riddles.
+      Say "I don't have that information" when needed.
+      Do not speak as Giovanni.
+
+      Professional experience limited to: CINQ, CI&T, GRDS IT Services.
+      Other data = academic, projects, certifications, focus areas.
+      ${jsonBlock}
+    `.trim(),
   };
+
 
   const stream = streamText({
     model: groq('llama-3.3-70b-versatile'),

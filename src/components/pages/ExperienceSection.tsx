@@ -28,11 +28,11 @@ import TypewriterQuote from "../shared/TypewriterQuote";
 
 const experiences = [
   {
-    title: "Full Stack Developer",
+    title: "Software Technical Lead",
     company: "GRDS IT Services",
     period: "Dec 2022 - Present",
     description:
-      "Leading the development of two international web applications for IoT device management. One is built with React (Next.js) and Node.js, integrated with MQTT and InfluxDB, deployed on AWS and Azure. The other is built with React and SST (Node.js), integrated with MQTT, IoT Core, Kinesis, Lambda, Aurora, AppSync, Athena, S3, API Gateway, Cognito, and deployed on AWS with Amplify.",
+      "Leading the design and delivery of two international IoT platforms used for device monitoring and control. Responsible for system architecture, technical direction, and integration of real-time data pipelines using React (Next.js), Node.js, MQTT, and InfluxDB, deployed across AWS and Azure. Platforms integrate cloud-native services including IoT Core, Kinesis, Lambda, Aurora, AppSync, Athena, S3, API Gateway, Cognito, and Amplify.",
     tags: [
       "React",
       "Next.js",
@@ -56,74 +56,74 @@ const experiences = [
     icon: <PublicIcon />,
   },
   {
-    title: "Full Stack Developer",
+    title: "Senior Software Engineer",
     company: "CI&T - dynaConnections",
     period: "Aug 2022 - Dec 2022",
     description:
-      "Modernized connectMLS, a real estate web app for US realtors. Migrated legacy code from AngularJS/Java to React/Spring Boot and improved system architecture.",
+      "Led the modernization of connectMLS, a large-scale real estate platform for U.S. realtors, migrating legacy AngularJS and Java systems to React and Spring Boot. Contributed to architectural improvements, scalability, and long-term maintainability.",
     tags: ["React", "Java", "Spring Boot", "AngularJS", "Real Estate"],
     icon: <CodeIcon />,
   },
   {
-    title: "Full Stack Developer",
+    title: "Senior Software Engineer",
     company: "CI&T - Corvalent",
     period: "Jun 2021 - Jul 2022",
     description:
-      "Developed CAT-APM, a web app to manage IoT devices. Used React on the frontend and ClearBlade (Node.js-based) on the backend.",
+      "Designed and developed CAT-APM, an IoT platform for asset and device management. Worked on frontend and backend components using React and ClearBlade, contributing to scalable device communication and system integration.",
     tags: ["React", "Node.js", "IoT", "ClearBlade"],
     icon: <StorageIcon />,
   },
   {
-    title: "Full Stack Developer",
+    title: "Senior Software Engineer",
     company: "CINQ - Schneider Electric",
     period: "May 2021 - Jun 2021",
     description:
-      "Built AI Backoffice, a tool to resolve invoice mismatches using Django and React, integrated into global finance systems.",
+      "Developed AI Backoffice, an internal platform to resolve invoice mismatches, built with Django and React and integrated into global enterprise finance systems.",
     tags: ["React", "Python", "Django REST", "Finance"],
     icon: <ComputerIcon />,
   },
   {
-    title: "Full Stack Developer",
+    title: "Software Engineer",
     company: "CINQ - SASCAR",
     period: "Jul 2020 - May 2021",
     description:
-      "Developed SASWeb 2, a fleet management platform using AngularJS and Java Spring Boot for national logistics solutions.",
+      "Contributed to the development of SASWeb 2, a fleet management platform supporting national logistics operations, using AngularJS and Java Spring Boot in production environments.",
     tags: ["AngularJS", "Java", "Spring Boot", "Fleet Management"],
     icon: <TerminalIcon />,
   },
   {
-    title: "Frontend Developer",
+    title: "Software Engineer",
     company: "CINQ - COMPAR",
     period: "Jan 2020 - Jul 2020",
     description:
-      "Built the Tudobem web/mobile health platform using React and React Native for improved patient engagement.",
+      "Developed the Tudobem health platform using React and React Native, improving digital engagement between patients and healthcare providers.",
     tags: ["React", "React Native", "Material UI", "Healthcare"],
     icon: <DeveloperModeIcon />,
   },
   {
-    title: "Frontend Developer",
+    title: "Software Engineer",
     company: "CINQ - Systecon",
     period: "Dec 2019 - Jan 2020",
     description:
-      "Modernized the Opus Suite desktop app into a web app using Vue.js and Vuetify, enhancing usability for logistics planning.",
+      "Modernized the Opus Suite desktop application into a web-based platform using Vue.js and Vuetify, improving usability for logistics planning and operations.",
     tags: ["Vue.js", "Vuetify", "Modernization"],
     icon: <CodeIcon />,
   },
   {
-    title: "Frontend Developer",
+    title: "Software Engineer",
     company: "CINQ - RCI Bank",
     period: "Oct 2019 - Dec 2019",
     description:
-      "Developed a web application for car dealership management using Angular and Material.",
+      "Developed a web application for car dealership management using Angular and Material UI, supporting automotive sales and operational workflows.",
     tags: ["Angular", "Material UI", "Automotive"],
     icon: <TerminalIcon />,
   },
   {
-    title: "Full Stack Developer",
+    title: "Junior Software Engineer",
     company: "CINQ - Imprint Energy",
     period: "Dec 2018 - Oct 2019",
     description:
-      "Created a full stack battery factory control web app using React and Django REST for energy tech solutions.",
+      "Built a full stack factory control platform using React and Django REST, supporting production monitoring and automation in energy technology environments.",
     tags: ["React", "Python", "Django REST", "Factory Automation"],
     icon: <StorageIcon />,
   },
@@ -132,7 +132,7 @@ const experiences = [
     company: "CINQ - SITA",
     period: "Mar 2015 - Dec 2018",
     description:
-      "Maintained and developed Airfare Insight, a Java Swing application for aviation pricing control integrated with Oracle DB.",
+      "Maintained and extended Airfare Insight, a Java Swing application used for aviation pricing analysis, integrated with Oracle databases and WebLogic in enterprise environments.",
     tags: ["Java", "Swing", "Oracle", "Weblogic", "Aviation"],
     icon: <ComputerIcon />,
   },
@@ -177,8 +177,8 @@ const ExperienceSection = () => {
               fontFamily: "Courier New, monospace",
             }}
           >
-            My professional journey in the digital realm. Remember, there is no
-            spoon.
+            A progression through systems, scale, and responsibility. Remember,
+            there is no spoon.
           </Typography>
         </motion.div>
         <Timeline

@@ -130,8 +130,7 @@ const AboutSection = () => {
                     fontWeight: "bold",
                   }}
                 >
-                  Computer Scientist & <br />
-                  Full Stack Software Engineer
+                  Software Technical Lead | IoT & Distributed Systems Specialist
                 </Typography>
 
                 <Box sx={{ color: "text.secondary", mb: 2 }}>
@@ -139,43 +138,43 @@ const AboutSection = () => {
                     sx={{ fontFamily: "Courier New, monospace" }}
                     gutterBottom
                   >
-                    Hi! I&apos;m Gio, a passionate software engineer from Brazil
-                    with over 9 years of experience designing and developing
-                    modern, scalable web applications. My journey began with a
-                    deep curiosity about how systems work and grew into a career
-                    focused on creating smart, secure, and connected digital
-                    experiences.
+                    Hi, I&apos;m Gio, a software technical lead from Brazil with
+                    over 9 years of experience designing and delivering scalable
+                    software platforms. My work focuses on building production
+                    systems where architecture, reliability, and long-term
+                    maintainability matter.
                   </Typography>
                   <Typography
                     sx={{ fontFamily: "Courier New, monospace" }}
                     gutterBottom
                   >
-                    With a strong academic background—holding both a
-                    Bachelor&apos;s and a Master&apos;s degree in Computer
-                    Science from UFPR—my expertise lies in crafting full stack
-                    solutions using React, Node.js, Java, Python, and a range of
-                    modern frameworks. I&apos;ve contributed to international
-                    and national projects across various industries, including
-                    aviation, healthcare, IoT, finance, and real estate, working
-                    with clients such as SITA, Schneider, Corvalent, and RCI
-                    Bank.
+                    I hold both a Bachelor&apos;s and a Master&apos;s degree in
+                    Computer Science from UFPR, with academic and professional
+                    focus on distributed systems and networked environments. I
+                    have designed and delivered full stack and backend solutions
+                    using React, Node.js, Java, and Python for international and
+                    national projects across aviation, healthcare, industrial
+                    IoT, finance, and real estate, working with clients such as
+                    SITA, Schneider, Corvalent, and RCI Bank.
                   </Typography>
                   <Typography
                     sx={{ fontFamily: "Courier New, monospace" }}
                     gutterBottom
                   >
-                    Today, I run{" "}
+                    Today, I operate through{" "}
                     <span style={{ color: "#00FF41" }}>GRDS IT Services</span>,
-                    where I build web platforms that connect to IoT devices,
-                    manage real-time data via MQTT, IoT Core, Aurora, and deploy
-                    cloud-native solutions on AWS and Azure.
+                    where I lead the design and development of IoT platforms
+                    that integrate real-time device data, messaging protocols,
+                    and cloud-native infrastructure. My work includes defining
+                    system architecture and deploying scalable solutions across
+                    AWS and Azure.
                   </Typography>
                   <Typography sx={{ fontFamily: "Courier New, monospace" }}>
-                    When I&apos;m not writing code or solving architecture
-                    puzzles, I&apos;m exploring my interests in IoT, machine
-                    learning, blockchain, and augmented reality—or just enjoying
-                    the latest breakthroughs in tech. Oh, and I also enjoy a
-                    little gaming on the side—keeps me sharp!
+                    Beyond day-to-day development and architecture work, I stay
+                    actively engaged with emerging areas such as IoT security,
+                    machine learning integration, blockchain-based systems, and
+                    augmented reality, continuously exploring how these
+                    technologies can be applied to real-world platforms.
                   </Typography>
                 </Box>
 
@@ -203,8 +202,8 @@ const AboutSection = () => {
                         fontFamily: "Courier New, monospace",
                       }}
                     >
-                      Bachelor in Computer Science, University of Paraná (UFPR)
-                      2014-2019
+                      Master in Networks and Distributed Systems at NR2 -
+                      University of Paraná (UFPR) - 2020-2023
                     </Box>
                     <Box
                       component="li"
@@ -214,8 +213,8 @@ const AboutSection = () => {
                         fontFamily: "Courier New, monospace",
                       }}
                     >
-                      Master in Networks and Distributed Systems at NR2 -
-                      University of Paraná (UFPR) - 2020-2023
+                      Bachelor in Computer Science, University of Paraná (UFPR)
+                      2014-2019
                     </Box>
                   </Box>
                 </Box>

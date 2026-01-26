@@ -14,7 +14,7 @@ const Footer = ({ chatOpen }: FooterProps) => {
   return (
     <Box
       component="footer"
-      visibility={chatOpen ? 'hidden' : 'visible'}
+      visibility={chatOpen ? "hidden" : "visible"}
       sx={{
         py: 6,
         position: "relative",
@@ -53,8 +53,8 @@ const Footer = ({ chatOpen }: FooterProps) => {
                   maxWidth: "md",
                 }}
               >
-                A passionate software engineer focused on building beautiful
-                interfaces & experiences.
+                Software Technical Lead focused on distributed systems, IoT
+                platforms, and secure, scalable architectures.
               </Typography>
             </motion.div>
           </Grid>
@@ -122,7 +122,7 @@ const Footer = ({ chatOpen }: FooterProps) => {
                   fontFamily: "Courier New, monospace",
                 }}
               >
-                Connect
+                Get in Touch
               </Typography>
               <Box sx={{ display: "flex", gap: 2, mb: 2 }}>
                 <IconButton
@@ -202,7 +202,7 @@ const Footer = ({ chatOpen }: FooterProps) => {
               color: "text.secondary",
             }}
           >
-            Designed & Built with ♥ by Giovanni Rosa
+            Built with intent inside the Matrix
           </Typography>
         </Box>
       </Container>

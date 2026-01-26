@@ -9,11 +9,11 @@ const languages = [
   { name: "Portuguese", level: "Native", value: 100 },
   {
     name: "English",
-    level: "Proficient (C2)",
+    level: "Proficient",
     value: 100,
     exp: [
-      "Influx English School, 3 years, completed in 2014",
-      "New College Group, 1 month in Manchester (UK), completed in 2015",
+      "Influx English School, 3-year program, completed in 2014",
+      "New College Group, intensive program in Manchester (UK), completed in 2015",
       "Test of English for International Communication (TOEIC), 2014 – grade 975/990",
       "Test of English as a Foreign Language (TOEFL), 2016 – grade 580/677",
     ],
@@ -24,20 +24,22 @@ const languages = [
     value: 50,
     exp: [
       "Can understand and communicate in everyday situations",
-      "Self-taught, basic reading and writing skills",
+      "Basic reading, writing, and conversational skills",
     ],
   },
   {
     name: "French",
     level: "Beginner (A1)",
     value: 10,
-    exp: ["Self-taught, basic understanding"],
+    exp: ["Basic reading, writing, and conversational skills",
+],
   },
   {
     name: "Italian",
     level: "Beginner (A1)",
     value: 10,
-    exp: ["Self-taught, basic understanding"],
+    exp: ["Basic reading, writing, and conversational skills",
+],
   },
 ];
 
@@ -76,8 +78,8 @@ const LanguageSection = () => {
               fontFamily: "Courier New, monospace",
             }}
           >
-            Decoding the world, one language at a time. Welcome to my linguistic
-            matrix.
+            Communicating across systems, cultures, and borders. Welcome to my
+            linguistic matrix.
           </Typography>
         </motion.div>
         <Box

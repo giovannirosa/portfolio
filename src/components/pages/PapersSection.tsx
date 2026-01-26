@@ -135,7 +135,7 @@ const PapersSection = () => {
               fontFamily: "Courier New, monospace",
             }}
           >
-            Academic Work
+            Publications & Research
           </Typography>
           <Typography
             align="center"
@@ -146,8 +146,8 @@ const PapersSection = () => {
               fontFamily: "Courier New, monospace",
             }}
           >
-            Publishing knowledge in the Matrix. Each paper is a ripple in the
-            digital code.
+            Original research contributions to security, IoT, and distributed
+            systems. Each paper leaves a trace in the code.
           </Typography>
           <Box sx={{ display: "flex", flexDirection: "column", gap: 4, mt: 4 }}>
             {papers.map((paper, idx) => (
@@ -243,7 +243,8 @@ const PapersSection = () => {
                         boxShadow: "0 0 8px #00FF4133",
                       }}
                     >
-                      <b>Abstract:</b> {paper.abstract}
+                      <b>Abstract (Summary of Contribution):</b>{" "}
+                      {paper.abstract}
                     </Box>
                   </Collapse>
                   <Typography
@@ -284,8 +285,8 @@ const PapersSection = () => {
             ))}
           </Box>
           <TypewriterQuote>
-            &quot;What do all men with power want? More power.&quot; - The
-            Merovingian
+            &quot;The purpose of knowledge is action, not knowledge.&quot; - The
+            Oracle
           </TypewriterQuote>
         </motion.div>
       </Container>

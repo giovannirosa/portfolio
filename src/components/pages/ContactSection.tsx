@@ -73,7 +73,7 @@ const ContactSection = () => {
       if (response.ok) {
         setSnackbar({
           open: true,
-          message: "Message sent! We'll unplug you soon.",
+          message: "Message sent successfully. I'll get back to you soon.",
           severity: "success",
         });
         setFormState({ name: "", email: "", message: "" });
@@ -125,19 +125,20 @@ const ContactSection = () => {
               fontFamily: "Courier New, monospace",
             }}
           >
-            Exit Program
+            Exit the Matrix
           </Typography>
           <Typography
             align="center"
             sx={{
               color: "text.secondary",
-              maxWidth: "800px",
+              maxWidth: "900px",
               mx: "auto",
               mb: 6,
               fontFamily: "Courier New, monospace",
             }}
           >
-            The Matrix has you. Follow the white rabbit. Knock, knock, Gio.
+            Ready to connect? Reach out for collaborations, consulting, or
+            professional opportunities.
           </Typography>
         </motion.div>
 
@@ -156,7 +157,7 @@ const ContactSection = () => {
                   fontFamily: "Courier New, monospace",
                 }}
               >
-                Operator Standing By
+                Direct Channels
               </Typography>
 
               <List>
@@ -313,7 +314,7 @@ const ContactSection = () => {
                       fontFamily: "Courier New, monospace",
                     }}
                   >
-                    Jack In
+                    Send a Message
                   </Typography>
 
                   <form onSubmit={handleSubmit}>

@@ -1,35 +1,24 @@
 [
-  { "name": "Portuguese", "level": "Native", "value": 100 },
+  {
+    "name": "Portuguese",
+    "level": "Native"
+  },
   {
     "name": "English",
     "level": "Proficient (C2)",
-    "value": 100,
-    "exp": [
-      "Influx English School, 3 years, completed in 2014",
-      "New College Group, 1 month in Manchester (UK), completed in 2015",
-      "Test of English for International Communication (TOEIC), 2014 – grade 975/990",
-      "Test of English as a Foreign Language (TOEFL), 2016 – grade 580/677"
-    ]
+    "certifications": ["TOEIC 975/990", "TOEFL 580/677"],
+    "usage": ["Professional", "Academic", "International projects"]
   },
   {
     "name": "Spanish",
-    "level": "Intermediate (B1)",
-    "value": 50,
-    "exp": [
-      "Can understand and communicate in everyday situations",
-      "Self-taught, basic reading and writing skills"
-    ]
+    "level": "Intermediate (B1)"
   },
   {
     "name": "French",
-    "level": "Beginner (A1)",
-    "value": 10,
-    "exp": ["Self-taught, basic understanding"]
+    "level": "Beginner (A1)"
   },
   {
     "name": "Italian",
-    "level": "Beginner (A1)",
-    "value": 10,
-    "exp": ["Self-taught, basic understanding"]
+    "level": "Beginner (A1)"
   }
 ]

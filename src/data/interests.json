@@ -1,22 +1,18 @@
 [
   {
     "title": "Internet of Things",
-    "description": "My most significant interest is Computing because, in my view, the future will depend on how the various products will interact with the Internet, using the information to have a significant impact on people's daily lives."
+    "description": "Design of connected systems that interact with the physical world and generate real-time data."
   },
   {
     "title": "Augmented Reality",
-    "description": "Another critical area that will develop more and more as technology advances. It should also impact people's routines; it will be key for the big cities of the future."
+    "description": "Integration of digital information with physical environments to enhance user interaction in future cities."
   },
   {
     "title": "Machine Learning",
-    "description": "Considering the amount of data people generate today, their analysis and processing are becoming increasingly important for commercial and social purposes."
+    "description": "Analysis and modeling of large datasets to extract insights and support intelligent systems."
   },
   {
     "title": "Blockchain",
-    "description": "This innovative technology is the next level for secure and resilient contracts with less bureaucracy through a decentralized and more efficient system."
-  },
-  {
-    "title": "Crypto Coins",
-    "description": "It is not clear what the role of these new currencies will be in the future, but their concept is very innovative and helps society not to depend on monetary policies centralized in the figure of a State."
+    "description": "Decentralized systems enabling secure, transparent, and resilient digital transactions."
   }
 ]

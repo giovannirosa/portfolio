@@ -11,13 +11,33 @@ import {
 import TypewriterQuote from "../shared/TypewriterQuote";
 
 const certifications = [
+  // HIGH-SIGNAL, RECOGNIZED CREDENTIALS
   {
-    title: "Voxy Proficiency Achievement Certificate - Low Advanced",
-    issuer: "Voxy",
-    year: "2022",
+    title: "Oracle Certified Professional Java SE 8 Programmer II",
+    issuer: "Oracle",
+    year: "2017",
     credential:
-      "https://app.voxy.com/certificates/proficiency-test/62fa4cfad8f6ea11d511fdba/",
+      "https://www.credly.com/badges/30eebda1-ba5b-4ccd-8bb5-055b84f0650e/linked_in",
   },
+  {
+    title: "Oracle Certified Associate Java SE 8 Programmer I",
+    issuer: "Oracle",
+    year: "2016",
+    credential:
+      "https://www.credly.com/badges/0e5eec63-64c8-4982-9708-942ed294e89d/linked_in_profile",
+  },
+  {
+    title: "Test of English for International Communication (TOEIC)",
+    issuer: "ETS",
+    year: "2014 - grade 975/990",
+  },
+  {
+    title: "Test of English as a Foreign Language (TOEFL)",
+    issuer: "ETS",
+    year: "2016 - grade 580/677",
+  },
+
+  // ACADEMIC / PROFESSIONAL RECOGNITION
   {
     title: "SBSeg2021 Presentation Certification",
     issuer: "Sociedade Brasileira de Computação - SBC",
@@ -32,6 +52,17 @@ const certifications = [
     credential:
       "https://drive.google.com/file/d/1OKhCqNy7N6HaVxupMWsKX1wcVH0IZ96Y/view?usp=sharing",
   },
+
+  // LANGUAGE & COMMUNICATION (SUPPORTING)
+  {
+    title: "Voxy Proficiency Achievement Certificate - Low Advanced",
+    issuer: "Voxy",
+    year: "2022",
+    credential:
+      "https://app.voxy.com/certificates/proficiency-test/62fa4cfad8f6ea11d511fdba/",
+  },
+
+  // CONTINUOUS LEARNING (LOW-SIGNAL, DELIBERATELY LOWER)
   {
     title: "Elastic Google Cloud Infrastructure: Scaling and Automation",
     issuer: "Qwiklabs",
@@ -81,30 +112,6 @@ const certifications = [
     issuer: "Udemy",
     year: "2018",
     credential: "https://www.udemy.com/certificate/UC-2TUZE9C4/",
-  },
-  {
-    title: "Oracle Certified Professional Java SE 8 Programmer II",
-    issuer: "Oracle",
-    year: "2017",
-    credential:
-      "https://www.credly.com/badges/30eebda1-ba5b-4ccd-8bb5-055b84f0650e/linked_in",
-  },
-  {
-    title: "Oracle Certified Associate Java SE 8 Programmer I",
-    issuer: "Oracle",
-    year: "2016",
-    credential:
-      "https://www.credly.com/badges/0e5eec63-64c8-4982-9708-942ed294e89d/linked_in_profile",
-  },
-  {
-    title: "Test of English as a Foreign Language (TOEFL)",
-    issuer: "ETS",
-    year: "2016 - grade 580/677",
-  },
-  {
-    title: "Test of English for International Communication (TOEIC)",
-    issuer: "ETS",
-    year: "2014 - grade 975/990",
   },
 ];
 
@@ -160,7 +167,7 @@ const CertificationsSection = () => (
             fontFamily: "Courier New, monospace",
           }}
         >
-          Certifications
+          Credentials
         </Typography>
         <Typography
           align="center"
@@ -171,8 +178,8 @@ const CertificationsSection = () => (
             fontFamily: "Courier New, monospace",
           }}
         >
-          Unlocking achievements in the Matrix. Each certification is a new key
-          to the digital world.
+          Credentials earned along the path. Some open doors — others sharpen
+          the mind.
         </Typography>
         <motion.div
           variants={paperContainerVariants}

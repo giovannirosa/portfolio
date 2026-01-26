@@ -68,7 +68,7 @@ const HeroSection = ({ setOpen }: HeroSectionProps) => {
                 sx={{
                   color: "#00FF41",
                   fontWeight: 500,
-                  mb: {xs: 0, lg: 1},
+                  mb: { xs: 0, lg: 1 },
                   fontFamily: "Courier New, monospace",
                 }}
               >
@@ -80,7 +80,7 @@ const HeroSection = ({ setOpen }: HeroSectionProps) => {
                 sx={{
                   fontSize: { xs: "2.5rem", sm: "3.5rem", md: "4.5rem" },
                   fontWeight: 700,
-                  mb: {xs: 0, lg: 2},
+                  mb: { xs: 0, lg: 2 },
                   background: "linear-gradient(to right, #00FF41, #07A64B)",
                   backgroundClip: "text",
                   textFillColor: "transparent",
@@ -97,7 +97,7 @@ const HeroSection = ({ setOpen }: HeroSectionProps) => {
                 sx={{
                   fontSize: { xs: "1.75rem", sm: "2.25rem", md: "3rem" },
                   fontWeight: 700,
-                  mb: {xs: 1, lg: 3},
+                  mb: { xs: 1, lg: 3 },
                   color: "text.primary",
                   fontFamily: "Courier New, monospace",
                 }}
@@ -116,9 +116,9 @@ const HeroSection = ({ setOpen }: HeroSectionProps) => {
                 }}
               >
                 There is a difference between knowing the path and walking the
-                path. I&apos;m a software engineer specializing in building
-                exceptional digital experiences. Take the red pill and I&apos;ll
-                show you how deep the rabbit hole goes.
+                path. I&apos;m a software technical lead designing and leading
+                production IoT and distributed systems at scale. Take the red
+                pill and I&apos;ll show you how deep the rabbit hole goes.
               </Typography>
             </motion.div>
 

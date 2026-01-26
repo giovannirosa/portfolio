@@ -5,7 +5,7 @@ import TypewriterQuote from "../shared/TypewriterQuote";
 
 const skills = [
   {
-    category: "Frontend",
+    category: "Client & Interface Systems",
     items: [
       "JavaScript",
       "TypeScript",
@@ -15,14 +15,11 @@ const skills = [
       "Angular 2+",
       "Vue.js",
       "React Native",
-      "HTML",
-      "CSS",
-      "JSON",
       "Material UI",
     ],
   },
   {
-    category: "Backend",
+    category: "Backend & Distributed Services",
     items: [
       "Node.js",
       "SST",
@@ -33,10 +30,12 @@ const skills = [
       "Python",
       "Django REST Framework",
       "RESTful APIs",
+      "Distributed Systems",
+      "System Architecture",
     ],
   },
   {
-    category: "Protocols",
+    category: "Networking & Communication Protocols",
     items: [
       "HTTP",
       "MQTT",
@@ -47,15 +46,14 @@ const skills = [
       "SSH",
       "SMTP",
       "DNS",
-      "IP",
     ],
   },
   {
-    category: "Database",
+    category: "Data Storage & Time-Series Systems",
     items: ["MySQL", "PostgreSQL", "MongoDB", "InfluxDB", "Oracle", "DynamoDB"],
   },
   {
-    category: "DevOps",
+    category: "Cloud & Platform Engineering",
     items: [
       "Git",
       "Gitlab Pipelines",
@@ -63,10 +61,12 @@ const skills = [
       "AWS",
       "Azure",
       "Google Cloud",
+      "Infrastructure Design",
+      "High-Availability Systems",
     ],
   },
   {
-    category: "Tools",
+    category: "Engineering Tools & Methodologies",
     items: [
       "JIRA",
       "Scrum",
@@ -122,8 +122,8 @@ const SkillsSection = () => {
               fontFamily: "Courier New, monospace",
             }}
           >
-            There is no spoon. I&apos;ve mastered bending these technologies to
-            my will.
+            There is no spoon. These are the tools I use to design, build, and
+            operate production systems.
           </Typography>
         </motion.div>
 
@@ -222,7 +222,8 @@ const SkillsSection = () => {
             </Typography>
 
             <TypewriterQuote noMarginTop>
-              &quot;I know gaming.&quot; - Gio
+              &quot;The real skill is understanding the system behind the
+              code.&quot; - Gio
             </TypewriterQuote>
           </Box>
         </motion.div>

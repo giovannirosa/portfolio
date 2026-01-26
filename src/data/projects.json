@@ -2,33 +2,33 @@
   {
     "title": "Blackjack",
     "period": "2015",
-    "description": "My first app, a blackjack game to develop my Java 8 knowledge. I used Java 8 and JavaFX, which were my first professional technologies at the time.",
+    "description": "JavaFX desktop application developed to learn Java 8 fundamentals and object-oriented programming.",
     "link": "https://github.com/giovannirosa/blackjack"
   },
   {
     "title": "Workflow Manager",
     "period": "2016 - 2017",
-    "description": "I developed a system to assist in upgrading and implementing the international project SITA - Airfare Insight, where the MySQL database is powered by Excel spreadsheets, transforming them into JSON."
+    "description": "Internal tool developed to support upgrades of an international aviation system by transforming Excel-based data into structured JSON."
   },
   {
     "title": "Dionysus",
     "period": "2017 - 2018",
-    "description": "I developed this inventory and sales control system for a bar. I used Java 8 and JavaFX, which were my most advanced knowledge at the time, being a desktop application integrated with an API of the EPSON TM-T20 laser printer."
+    "description": "Inventory and sales control desktop system built with JavaFX, integrated with EPSON thermal printers."
   },
   {
     "title": "Database Packager",
     "period": "2018",
-    "description": "I developed a system to extract files from an SVN repository, present them in a friendly interface and export them in a compressed form in .zip."
+    "description": "Tool for extracting files from SVN repositories and exporting them as compressed ZIP packages."
   },
   {
     "title": "Mercurius",
-    "period": "2018 - unfinished",
-    "description": "I started to develop a system for complete control of a trade, including its customers, services, stock, calendar, and cashier for a salon. I used Spring Boot on the backend and Angular 6 on the frontend, a responsive web application that can be accessed on any device."
+    "period": "2018",
+    "description": "Unfinished full stack business management system using Spring Boot and Angular."
   },
   {
     "title": "Matrix Portfolio",
     "period": "2025",
-    "description": "This portfolio is a personal project that showcases my skills and projects in a creative way, inspired by the Matrix universe. It features a unique design with a terminal-like interface, animations, and interactive elements.",
+    "description": "Personal portfolio showcasing professional experience, academic work, and projects with a Matrix-inspired interactive interface.",
     "link": "https://github.com/giovannirosa/portfolio"
   }
 ]
