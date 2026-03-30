@@ -183,9 +183,9 @@ const SkillsSection = () => {
                           fontWeight: 500,
                           mb: 1,
                           fontFamily: "Courier New, monospace",
-                          transition: "transform 0.6s ease-in-out",
+                          transition: "transform 0.2s ease-out, box-shadow 0.2s ease-out",
                           "&:hover": {
-                            transform: "rotate(360deg)",
+                            transform: "scale(1.08)",
                             boxShadow: "0 10px 20px rgba(0, 255, 65, 0.1)",
                           },
                         }}

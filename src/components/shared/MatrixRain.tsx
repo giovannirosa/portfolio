@@ -35,7 +35,7 @@ const MatrixRainParticles = () => {
           value: "#000000", // The background of the canvas
         },
       },
-      fpsLimit: 120, // Lower this to save performance
+      fpsLimit: 60,
       interactivity: {
         events: {
           onClick: {
@@ -81,7 +81,7 @@ const MatrixRainParticles = () => {
             enable: true,
             area: 400,
           },
-          value: 600, // The number of characters on screen
+          value: 300,
         },
         opacity: {
           value: { min: 0.2, max: 0.8 }, // Characters will have varying opacities
@@ -148,6 +148,7 @@ const MatrixRainParticles = () => {
     return (
       <Particles
         id="tsparticles"
+        aria-hidden="true"
         particlesLoaded={particlesLoaded}
         options={options}
         style={{

@@ -1,8 +1,5 @@
 import { groq } from '@ai-sdk/groq';
 import { streamText } from 'ai';
-// import wasm from "tiktoken/lite/tiktoken_bg.wasm?module";
-// import model from "tiktoken/encoders/cl100k_base.json";
-// import { init, Tiktoken } from "tiktoken/lite/init";
 import about from '@/data/about.json';
 import certifications from '@/data/certifications.json';
 import contact from '@/data/contact.json';
@@ -17,12 +14,6 @@ export const runtime = 'edge';
 export const maxDuration = 30;
 
 export async function POST(req: Request) {
-  // await init((imports) => WebAssembly.instantiate(wasm, imports));
-  // const encoding = new Tiktoken(
-  //   model.bpe_ranks,
-  //   model.special_tokens,
-  //   model.pat_str
-  // );
   const { messages } = await req.json();
 
   const jsonBlock = `
@@ -36,9 +27,6 @@ export async function POST(req: Request) {
     INTERESTS: ${JSON.stringify(interests)}
     CONTACT: ${JSON.stringify(contact)}
   `;
-
-
-  // console.log('tokens:', encoding.encode(jsonBlock).length);
 
   // Prepend a system prompt to ground the model in your portfolio info:
   const system = {

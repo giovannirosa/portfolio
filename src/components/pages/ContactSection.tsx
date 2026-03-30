@@ -102,7 +102,8 @@ const ContactSection = () => {
       id="contact"
       ref={ref}
       sx={{
-        py: 10,
+        pt: 20,
+        pb: 10,
         position: "relative",
         overflow: "hidden",
       }}
