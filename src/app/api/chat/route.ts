@@ -13,42 +13,47 @@ import skills from '@/data/skills.json';
 export const runtime = 'edge';
 export const maxDuration = 30;
 
+const MAX_HISTORY = 10;
+
+const trimmedPapers = papers.map((p) => ({
+  ...p,
+  abstract: p.abstract.slice(0, 300) + (p.abstract.length > 300 ? '…' : ''),
+}));
+
+const jsonBlock = `
+  ABOUT: ${JSON.stringify(about)}
+  CERTIFICATIONS: ${JSON.stringify(certifications)}
+  EXPERIENCE: ${JSON.stringify(experiences)}
+  PAPERS: ${JSON.stringify(trimmedPapers)}
+  PROJECTS: ${JSON.stringify(projects)}
+  SKILLS: ${JSON.stringify(skills)}
+  LANGUAGES: ${JSON.stringify(languages)}
+  INTERESTS: ${JSON.stringify(interests)}
+  CONTACT: ${JSON.stringify(contact)}
+`.trim();
+
+const systemMessage = {
+  role: 'system' as const,
+  content: `
+    You are The Oracle (Matrix-style), calm and factual.
+
+    Answer questions about Giovanni Rosa using ONLY the data below.
+    No invention, no exaggeration, no roleplay, no riddles.
+    Say "I don't have that information" when needed.
+    Do not speak as Giovanni.
+    Be concise. Use 3-4 sentences max unless listing items.
+    Always respond in the same language the user writes in.
+
+    ${jsonBlock}
+  `.trim(),
+};
+
 export async function POST(req: Request) {
   const { messages } = await req.json();
 
-  const jsonBlock = `
-    ABOUT: ${JSON.stringify(about)}
-    CERTIFICATIONS: ${JSON.stringify(certifications)}
-    EXPERIENCE: ${JSON.stringify(experiences)}
-    PAPERS: ${JSON.stringify(papers)}
-    PROJECTS: ${JSON.stringify(projects)}
-    SKILLS: ${JSON.stringify(skills)}
-    LANGUAGES: ${JSON.stringify(languages)}
-    INTERESTS: ${JSON.stringify(interests)}
-    CONTACT: ${JSON.stringify(contact)}
-  `;
-
-  // Prepend a system prompt to ground the model in your portfolio info:
-  const system = {
-    role: 'system',
-    content: `
-      You are The Oracle (Matrix-style), calm and factual.
-
-      Answer questions about Giovanni Rosa using ONLY the data below.
-      No invention, no exaggeration, no roleplay, no riddles.
-      Say "I don't have that information" when needed.
-      Do not speak as Giovanni.
-
-      Professional experience limited to: CINQ, CI&T, GRDS IT Services.
-      Other data = academic, projects, certifications, focus areas.
-      ${jsonBlock}
-    `.trim(),
-  };
-
-
   const stream = streamText({
     model: groq('llama-3.3-70b-versatile'),
-    messages: [system, ...messages],
+    messages: [systemMessage, ...messages.slice(-MAX_HISTORY)],
   });
 
   return stream.toDataStreamResponse();

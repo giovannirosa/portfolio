@@ -96,6 +96,13 @@ const certifications = [
       "https://drive.google.com/file/d/1S3yYTNDjy7xKFDAE1V_w-m2RgoMqO6r4/view?usp=sharing",
   },
   {
+    title: "Claude Code - The Practical Guide",
+    issuer: "Udemy",
+    year: "2026",
+    credential:
+      "https://www.udemy.com/certificate/UC-5d5fe0d6-a09e-418e-85dc-4810e8e7625c/",
+  },
+  {
     title: "R Programming A-Z™: R For Data Science With Real Exercises!",
     issuer: "Udemy",
     year: "2019",
